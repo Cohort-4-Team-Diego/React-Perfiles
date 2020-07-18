@@ -1,78 +1,55 @@
 import React from 'react';
-import logo from './assets/images/Logo-Cohort-No-Background.png';
-import logoNoTexto from './assets/images/Logo-Texto-No-Fondo.png';
 import './App.css';
 import './assets/css/profile-picture.css';
 import './assets/css/footer.css';
+
+import Header from './components/Header';
+import TeamDistribution from './components/TeamDistribution';
+import TeamDistributionItem from './components/TeamDistributionItem';
+import Footer from './components/Footer';
+
+const teamMates = [
+  {
+    name: 'Francisco', classPosition: 'img-1'
+  },
+  {
+    name: 'Ildebrando', classPosition: 'img-2'
+  },
+  {
+    name: 'Oscar', classPosition: 'img-3'
+  },
+  {
+    name: 'Juan', classPosition: 'img-4'
+  },
+  {
+    name: 'Santiago', classPosition: 'img-5'
+  },
+  {
+    name: 'Didier', classPosition: 'img-6'
+  },
+  {
+    name: 'Adrian', classPosition: 'img-7'
+  },
+  {
+    name: 'Diego', classPosition: 'img-8'
+  }
+]
 
 function App() {
   return (
     <div className="App">
 
-      <header className="nav-header">
-        <nav id="navbar">
-          <a href="#"><img className="logo-initial" src={logo}
-              alt="Este es un logo" /></a>
-          <div className="toggle">
-            <div className="menu">
-              <img className="logo-toggle" src="assets/images/Logo-Cohort-No-Background.png" alt="Este es un logo" />
-              <i className="fas fa-bars burger-button" aria-hidden="true"></i>
-            </div>
-          </div>
-          <ul class="ulNavbar">
-            <li><a className="item-li team-nav" href="#team-cohort">Equipo</a></li>
-            <li><a className="item-li contact-nav" href="#contact">Contacto</a></li>
-          </ul>
-        </nav>
-      </header>
+      <Header />
 
-      <section id="team-cohort">
-        <div class="team-distribution">
-          <div class="team-distribution-img img-1">
-            <a onclick="review('#modalPerfil')">
-              <h2>Francisco</h2>
-            </a>
-          </div>
-          <div class="team-distribution-img img-2">
-            <a onclick="review('#modalPerfil')">
-              <h2>Ildebrando</h2>
-            </a>
-          </div>
-          <div class="team-distribution-img img-3">
-            <a onclick="review('#modalPerfil')">
-              <h2>Oscar</h2>
-            </a>
-          </div>
-          <div class="team-distribution-img img-4">
-            <a onclick="review('#modalPerfil')">
-              <h2>Juan</h2>
-            </a>
-          </div>
-          <div class="team-distribution-img img-5">
-            <a onclick="review('#modalPerfil')">
-              <h2>Santiago</h2>
-            </a>
-          </div>
-          <div class="team-distribution-img img-6">
-            <a onclick="review('#modalPerfil')">
-              <h2>Didier</h2>
-            </a>
-          </div>
-          <div class="team-distribution-img img-7">
-            <a onclick="review('#modalPerfil')">
-              <h2>Adrian</h2>
-            </a>
-          </div>
-          <div class="team-distribution-img img-8">
-            <a onclick="review('#modalPerfil')">
-              <h2>Diego</h2>
-            </a>
-          </div>
-          <div class="team-distribution-img img-9">
-            <img src={logoNoTexto} alt="logo" />
-          </div>
-        </div>
-      </section>
+      <TeamDistribution>
+        {
+          teamMates.map(
+            ({name, classPosition}) => <TeamDistributionItem name={name} classPosition={classPosition}/>
+          )
+        }
+      </TeamDistribution>
+
+      <Footer/>
 
       <div id="cajaFooter" class="container_modal">
         <div class="wrapper-footer">
@@ -156,20 +133,6 @@ function App() {
           </div>
         </div>
       </div>
-
-      <footer id="contact" className="footer">
-        <ul className="granlista">
-          <a href="https://github.com/Cohort-4-Team-Diego" target="_blank"><li className="abrirlista1 github"></li></a>
-          <a href="https://platzi.com/" target="_blank"><li className="abrirlista1 Platzi"></li></a>
-          <a href="mailto:c4random.master@gmail.com" target="_blank"><li className="abrirlista1 correo"></li></a>
-          <li className="list-item-new-member">
-            <a href="#contact" className="modal-footer-new-member" onclick="review('#cajaFooter')">
-              <i className="fas fa-user-plus"></i> Nuevo Miembro
-            </a>
-          </li>
-        </ul>
-
-      </footer>
 
       <div id="modalPerfil" class="container_modal--perfil">
         <div class="modal-perfiles">
