@@ -1,38 +1,129 @@
-.App {
-  text-align: center;
+/* General */
+
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+:root{
+    --navbar-gray-background-color:#333642;
+    --navbar-shadow-color: rgba(58, 54, 54, 0.753);
+    --dropdown-background-color: #4f525f ;
+    --hover-dropdown-background-color: #757883;
+    --font-white-color: #ffffff;
+    --hover-font-white-color: #c9c9c9;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Play', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html{
+    scroll-behavior: smooth;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Header */
+
+.toggle{
+    width: 100%;
+    padding: 10px 20px;
+    background-color: var(--navbar-gray-background-color);
+    color: var(--font-white-color);
+    text-align: right;
+    font-size: 30px;
+    box-sizing: border-box;
+    display: none;
 }
 
-.App-link {
-  color: #61dafb;
+nav {
+    width: 100%;
+    background-color: var(--navbar-gray-background-color);
+    box-shadow: 0px 5px 5px var(--navbar-shadow-color);
+    position: fixed;
+    z-index: 1;
+    text-align: right;
+    display: flex;
+    align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav a .logo-initial{
+    width: 150px;
+    height: auto;
+    padding-left: 12.5%;
+}
+
+nav .ulNavbar {
+    width: 100%;
+    margin: 0 auto;
+    padding-right: 2.5%;
+}
+
+nav .ulNavbar li{
+    display: inline-block;
+    list-style: none;
+    padding: 18px;
+    border-bottom: 4px solid transparent;
+}
+
+nav .ulNavbar li:hover {
+    border-bottom: 4px solid var(--font-white-color);
+}
+
+nav .ulNavbar li a{
+    color: var(--font-white-color);
+    text-decoration: none;
+    padding: 18px;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 767px){
+    nav {
+        width: 100%;
+        display: initial;
+    }
+
+    nav a .logo-initial{
+        display: none;
+    }
+
+    .ulNavbar {
+        width: 100%;
+        display: none;
+    }
+
+    .ulNavbar li{
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-left: -3.5%;
+    }
+
+    nav .ulNavbar li:hover {
+        border-bottom: 4px solid transparent;
+    }
+
+    .toggle{
+        width: 100%;
+        display: inline-block;
+    }
+
+    .logo-toggle{
+        width: 150px;
+        height: auto;
+    }
+
+    .burger-button{
+        cursor: pointer;
+    }
+
+    .menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .active{
+        display: block;
+    }
+
 }
