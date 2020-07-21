@@ -7,24 +7,24 @@ const ulNavbar = document.querySelector('.ulNavbar')
 
 mobile.addListener(validation)
 
-function validation(event){
-    if(event.matches){
-        burgerButton.addEventListener('click', hideShow)
-        teamNav.addEventListener('click', hideShow)
-        contactNav.addEventListener('click', hideShow)
-    } else {
-        burgerButton.removeEventListener('click', hideShow)
-        teamNav.removeEventListener('click', hideShow)
-        contactNav.removeEventListener('click', hideShow)
-    }
+function validation(event) {
+	if (event.matches) {
+		burgerButton.addEventListener('click', hideShow)
+		teamNav.addEventListener('click', hideShow)
+		contactNav.addEventListener('click', hideShow)
+	} else {
+		burgerButton.removeEventListener('click', hideShow)
+		teamNav.removeEventListener('click', hideShow)
+		contactNav.removeEventListener('click', hideShow)
+	}
 }
 
 validation(mobile)
 
 function hideShow() {
-    if (ulNavbar.classList.contains('active')) {
-        ulNavbar.classList.remove('active')
-    } else {
-        ulNavbar.classList.add('active')
-    }
+	if (ulNavbar.classList.contains('active')) {
+		ulNavbar.classList.remove('active')
+	} else {
+		ulNavbar.classList.add('active')
+	}
 }
