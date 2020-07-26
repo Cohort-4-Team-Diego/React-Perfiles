@@ -1,4 +1,5 @@
 import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 import './assets/css/profile-picture.css'
 import './assets/css/footer.css'
@@ -9,7 +10,6 @@ import TeamDistributionItem from './components/TeamDistributionItem'
 import Footer from './components/Footer'
 import ModalCrearPerfil from './components/ModalCrearPerfil.jsx'
 import ModalPerfil from './components/ModalPerfil.jsx'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import api from './api';
 
 class App extends React.Component {
