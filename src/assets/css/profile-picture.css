@@ -35,8 +35,9 @@ section {
 	padding-bottom: 20px;
 }
 
-.team-distribution a {
+.team-distribution button {
 	display: none;
+	outline: none;
 }
 
 .team-distribution img {
@@ -59,7 +60,7 @@ section {
   position: relative;
 }
 
-.team-distribution .team-distribution-img:hover a {
+.team-distribution .team-distribution-img:hover button {
   font-family: "Play", sans-serif;
   color: #f2d557;
   text-shadow: 2px 2px 2px black;
@@ -78,6 +79,7 @@ section {
   bottom: 0;
   right: 0;
   left: 0;
+  outline: none;
 }
 
 .team-distribution .img-1 {

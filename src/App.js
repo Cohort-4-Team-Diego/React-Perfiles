@@ -56,7 +56,7 @@ class App extends React.Component {
         <TeamDistribution>
           {this.state.data.map((profile, index) => (
             <TeamDistributionItem
-              {...profile}
+              profile={profile}
               classPosition={`img-${index+1}`}
               key={profile._id}
             />
