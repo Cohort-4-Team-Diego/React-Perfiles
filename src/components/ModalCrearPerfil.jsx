@@ -1,10 +1,11 @@
 import React from 'react'
+import ReactDOM from 'react-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWindowClose } from '@fortawesome/free-solid-svg-icons'
 
 const ModalCrearPerfil = ({ toggle, hideModal }) => {
 	const modalShow = `container_modal ${toggle}`
-	return (
+	return ReactDOM.createPortal(
 		<div id="cajaFooter" className={modalShow}>
 			<div className="wrapper-footer">
 				<div className="close">
@@ -94,7 +95,8 @@ const ModalCrearPerfil = ({ toggle, hideModal }) => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</div>,
+		document.getElementById('modal')
 	)
 }
 

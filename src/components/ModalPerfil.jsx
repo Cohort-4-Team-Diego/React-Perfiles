@@ -1,13 +1,19 @@
 import React from 'react'
+import ReactDOM from 'react-dom';
 import '../assets/css/ModalPerfil.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWindowClose, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import pandaPlaceholder from '../assets/images/panda-placeholder.webp'
 
-const ModalPerfil = ({ toggle, hideModal }) => {
-	let modalShow = `container_modal--perfil ${toggle}`
+const ModalPerfil = ({ toggle, hideModal, profile }) => {
+	const modalShow = `container_modal--perfil ${toggle}`
 
-	return (
+	if (!profile) {
+		return null;
+	}
+
+	return ReactDOM.createPortal(
 		<div id="modalPerfil" className={modalShow}>
 			<div className="modal-perfiles">
 				<div className="close">
@@ -17,7 +23,6 @@ const ModalPerfil = ({ toggle, hideModal }) => {
 					</a>
 				</div>
 				<div className="container_modal--perfil-caja">
-					<h2>Registro de nuevo tripulante</h2>
 					<div className="carrusel-perfil">
 						<div className="row">
 							<div className="col-12 text-center">
@@ -29,29 +34,27 @@ const ModalPerfil = ({ toggle, hideModal }) => {
 								<div className="modal-image-container">
 									<img
 										className="bst-imagen-perfil border shadow"
-										src="assets/images/FranciscoS.jpg"
-										alt=""
+										src={profile.photo || pandaPlaceholder}
+										alt={profile.name}
 									/>
 								</div>
 							</div>
 							<div className="col-12 col-md-12 col-lg-7 profile-details text-center">
 								<p id="nombre">
-									<strong>Nombre: </strong> Francisco Javier
-									Suarez Verdugo
+									<strong>Nombre: </strong> {profile.name}
 								</p>
 								<p id="nacionalidad">
-									<strong>Nacionalidad: </strong>Colombia
+									<strong>Nacionalidad: </strong> {profile.country} {profile.country.toLowerCase() === 'colombia' ? '🇨🇴': '🇲🇽' }
 								</p>
 								<p id="ciudadOrigen">
-									<strong>Ciudad origen: </strong>Bogotá
+									<strong>Ciudad origen: </strong> {profile.origin_city}
 								</p>
 								<p id="perfilTecnico">
-									<strong>Perfil Tecnico: </strong>
-									Desarrollador
+									<strong>Perfil Tecnico: </strong> {profile.technical_profile}
 								</p>
 								<div className="modal-social-icons">
 									<a
-										href="https://platzi.com/@Ulzahk/"
+										href={`https://platzi.com/@${profile.platzi_profile}/`}
 										target="_blank"
 									>
 										<p id="perfilPlatzi">
@@ -64,7 +67,7 @@ const ModalPerfil = ({ toggle, hideModal }) => {
 										</p>
 									</a>
 									<a
-										href="https://bit.ly/2w3DcJm"
+										href={profile.twitter_profile}
 										target="_blank"
 									>
 										<p id="perfilTwiter">
@@ -75,7 +78,7 @@ const ModalPerfil = ({ toggle, hideModal }) => {
 										</p>
 									</a>
 									<a
-										href="https://www.linkedin.com/in/francisco-j-suarez"
+										href={profile.linkedin_profile}
 										target="_blank"
 									>
 										<p id="perfilLinkedin">
@@ -88,7 +91,7 @@ const ModalPerfil = ({ toggle, hideModal }) => {
 										</p>
 									</a>
 									<a
-										href="mailto:ulzahk@gmail.com"
+										href={`mailto:${profile.email}`}
 										target="_blank"
 									>
 										<p id="email">
@@ -106,26 +109,24 @@ const ModalPerfil = ({ toggle, hideModal }) => {
 						<div className="row">
 							<div className="col-12 col-md-12 mt-2 profile-answers">
 								<p id="pregunta1">
-									<strong>SuperPoder: </strong> Lorem ipsum
-									dolor sit amet consectetur adipisicing elit.
+									<strong>SuperPoder: </strong> {profile.superpower}
 								</p>
 								<p id="pregunta2">
-									<strong>Debilidad: </strong> Lorem ipsum
-									dolor sit amet consectetur adipisicing elit.
+									<strong>Debilidad: </strong> {profile.weakness}
 								</p>
 								<p id="pregunta3">
 									<strong>
 										Que deseas lograr con Platzi Master:
 									</strong>{' '}
-									Lorem ipsum dolor sit amet consectetur
-									adipisicing elit.
+									{profile.description}
 								</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</div>,
+		document.getElementById('modal')
 	)
 }
 
