@@ -1,11 +1,14 @@
 import React from 'react'
 import ModalPerfil from './ModalPerfil.jsx'
+import pandaPlaceholder from '../assets/images/panda-placeholder.webp'
+
 class TeamDistributionItem extends React.Component {
-	constructor({ name, classPosition }) {
+	constructor({ name, classPosition, photo }) {
 		super()
 		this.state = {
 			itemClass: `team-distribution-img ${classPosition}`,
-			name: name,
+			name,
+			photo: photo || pandaPlaceholder,
 			show: '',
 		}
 	}
@@ -20,6 +23,7 @@ class TeamDistributionItem extends React.Component {
 	render() {
 		return (
 			<div className={this.state.itemClass}>
+				<img src={this.state.photo} alt={this.state.name}/>
 				<a onClick={this.showModal}>
 					<h2>{this.state.name}</h2>
 				</a>
