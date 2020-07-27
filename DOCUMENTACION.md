@@ -1,4 +1,4 @@
-# Perfiles Cohort 4
+# PanDevs
 ## Platzi master
 ### Coach: *Diego Maury*
 ### Integrantes: Ildebrando, Juan, Didier, Oscar, Santiago, Adrian, Fransisco
