@@ -24,10 +24,7 @@ Las cuales fueron grabadas y se puede ver en el siquiente link [Ver Sesiones gra
 
 Es un servicio en donde se implemento un CRUD (Create, Read, Update, Delete) en node.js apoyado con base de datos NoSQL MongoDB, en este proyecto se emplementaron tecnologias como Express, Cors, Mongoose
 
-<img src="https://img.shields.io/badge/node-11.1.3-green">
-<img src="https://img.shields.io/badge/mongoose-5.9.24-red">
-<img src="https://img.shields.io/badge/Express.js-4.17.1-lightgrey">
-<img src="https://img.shields.io/badge/MongoDB Atlas-Green">
+<img src="https://img.shields.io/badge/node-11.1.3-green"><img src="https://img.shields.io/badge/mongoose-5.9.24-red"><img src="https://img.shields.io/badge/Express.js-4.17.1-lightgrey"><img src="https://img.shields.io/badge/MongoDB Atlas-Green">
 
 ### Instalacion 🔧
 
@@ -45,10 +42,7 @@ Es un servicio en donde se implemento un CRUD (Create, Read, Update, Delete) en 
 
 Servicio fronted en donde se utilizo la libreria de React Js, HTML5, CSS, Javascript y desde la cual se esta consumiendo el servicio realizado en el Backend, 
 
-<img src="https://img.shields.io/badge/HTML-5-orange">
-<img src="https://img.shields.io/badge/CSS-3-blue">
-<img src="https://img.shields.io/badge/JavaScript-Yellow">
-<img src="https://img.shields.io/badge/React.js-16.13.1-blue">
+<img src="https://img.shields.io/badge/HTML-5-orange"><img src="https://img.shields.io/badge/CSS-3-blue"><img src="https://img.shields.io/badge/JavaScript-Yellow"><img src="https://img.shields.io/badge/React.js-16.13.1-blue">
 
 ### Instalacion 🔧
 
@@ -58,8 +52,7 @@ Servicio fronted en donde se utilizo la libreria de React Js, HTML5, CSS, Javasc
 - Ingrear desde el navegador a `http://localhost:3000`
 
 
-## Licencia 
-
+## Licencia
 <img src="https://img.shields.io/badge/Licence-MIT-RED"> 
 
 Este proyecto está bajo la Licencia (MIT)
