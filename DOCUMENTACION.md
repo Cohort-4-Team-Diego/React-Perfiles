@@ -8,18 +8,31 @@
 <center><h1>Platzi master</h1></center> 
 
 ### Coach: *Diego Maury*
-### Integrantes: Ildebrando, Juan, Didier, Oscar, Santiago, Adrian, Fransisco
+
+## Integrantes y roles
+
+|Integrante         |Area              |Rol               |
+|:------------------|:-----------------|:-----------------|
+|Adrian Gutierrez   |**Frontend:**     | Diseño página de perfil, Desarrollo de sección Hero      |
+|Didier Cuetia      |**Backend:**      |Conexión Backend con Frontend, Desarrollo de sección descriptiva |
+|Ildebrando Mora    |**Backend:**| Administración Base de Datos, Documentación de APP Web|
+|Juan Espitia       |**Frontend** | Desarrollo de Footer y Modal, Documentación de APP Web       |
+|Santiago Arcila    |**Frontend** | Desarrollo de distribución ciruclar,  Desarrollo de sección descriptiva
+|Oscar Perez        |**Backend** | Conexión de Backend con Frontend, Administración de GitHub Backend
+|Francisco Suarez   |**Frontend** | Desarrollo de Navbar, Administración de Github Frontend
+
+
 
 
 Inicialmente este proyecto comenzó realizarse como una SPA ya que teníamos conocimientos básicos del desarrollo web, a medida que se fue avanzando en curso se fueron agregando diferentes actualizaciones como lo son usar Node.js Mongo y React js. 
 
-El proyecto tiene como nombre panDevs, analogía que sacamos del tiempo en el que nos encontramos y del largo trabajo que lleva cursar Platzi master, este tiene una página principal la cual interactúa con el usuario de manera dinámica en el momento de realizar las consultas a cada miembro, o al momento de registrarse para ser parte el equipo, igualmente a medida que se va agregando un miembro el aplicativo reagina agregándolo a la lista de integrantes, los miembro iniciales del proyecto se agregan igualmente a una pare grafica de la página principal que permite visualizar a los pioneros del equipo.
+El proyecto tiene como nombre **PanDevs**, analogía que sacamos del tiempo en el que nos encontramos y del largo trabajo que lleva cursar Platzi master, este tiene una página principal la cual interactúa con el usuario de manera dinámica en el momento de realizar las consultas a cada miembro, o al momento de registrarse para ser parte el equipo, igualmente a medida que se va agregando un miembro el aplicativo reagina agregándolo a la lista de integrantes, los miembro iniciales del proyecto se agregan igualmente a una pare grafica de la página principal que permite visualizar a los pioneros del equipo.
 
 Entre todos los  integrandes del equipo participamos en varias reuniones en donde se delegaron roles para las diferentes tareas a realiza.
-Las cuales fueron grabadas y se puede ver en el siquiente link [Ver Sesiones grabadas](https://drive.google.com/drive/u/0/folders/1Y7KVsIQDkobras1ooW4ftoBsjRkW2Zfp)
+Las cuales fueron grabadas y se puede ver en el siquiente link [Ver sesiones grabadas](https://drive.google.com/drive/u/0/folders/1Y7KVsIQDkobras1ooW4ftoBsjRkW2Zfp)
 
 
-## Backeend Node.js
+## Backend Node.js
 ### Comenzado 🚀
 
 Es un servicio en donde se implemento un CRUD (Create, Read, Update, Delete) en node.js apoyado con base de datos NoSQL MongoDB, en este proyecto se emplementaron tecnologias como Express, Cors, Mongoose
@@ -38,7 +51,7 @@ Es un servicio en donde se implemento un CRUD (Create, Read, Update, Delete) en 
 
 ## Frontend React js
 
-### Comenzado 🚀
+### Comenzando 🚀
 
 Servicio fronted en donde se utilizo la libreria de React Js, HTML5, CSS, Javascript y desde la cual se esta consumiendo el servicio realizado en el Backend, 
 
