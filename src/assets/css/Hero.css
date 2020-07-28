@@ -1,0 +1,90 @@
+.Hero {
+	height: 100vh;
+	background: #4d4d4d;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-image: url('../images/bamboo.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+.superior {
+	margin-top: 65px;
+	padding: 40px;
+	display: flex;
+	background-image: url('../images/leaf.png');
+	background-size: 40%;
+	background-repeat: no-repeat;
+}
+
+.Hero-container {
+	margin: 0 auto;
+	max-width: 800px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.Hero-img {
+	align-self: center;
+}
+.Hero-img img {
+	max-width: 25vh;
+}
+.Hero-title {
+	color: white;
+	align-self: center;
+	font-weight: 700;
+	font-size: 40px;
+}
+.Hero-description {
+	font-size: 30px;
+	align-self: center;
+	color: white;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.Hero-button {
+	background: white;
+	padding: 0 100px;
+	margin: 0 auto;
+	font-size: 28px;
+	border: 5px solid #7cae76;
+	border-radius: 10px;
+	text-transform: uppercase;
+	color: #7cae76;
+}
+
+.inferior {
+	height: 500px;
+	display: flex;
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+.Hero-logos {
+	display: flex;
+	gap: 8vw;
+	align-items: center;
+}
+
+.Hero-logos_html {
+	width: 10vw;
+}
+
+.Hero-logos_css {
+	width: 7vw;
+}
+
+.Hero-logos_react {
+	width: 15vw;
+}
+
+.Hero-logos_mongo {
+	width: 11vw;
+}
+
+.Hero-logos_github {
+	width: 20vw;
+}
