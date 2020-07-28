@@ -13,6 +13,8 @@ import ModalCrearPerfil from './components/ModalCrearPerfil.jsx'
 import ModalPerfil from './components/ModalPerfil.jsx'
 import api from './api'
 
+import ProfileCard from './components/ProfileCard'
+
 class App extends React.Component {
 	constructor() {
 		super()
@@ -48,11 +50,23 @@ class App extends React.Component {
 		}
 	}
 
-	render() {
-		return (
+      this.setState({
+        loading: false,
+        data
+      })
+    } catch (error) {
+      this.setState({
+        loading: false,
+        error
+      })
+    }
+  }
+
+  render() {
+    return (
 			<div className="App">
 				<Header />
-				<Hero />
+        <Hero />
 				<TeamDistribution>
 					{this.state.data.map((profile, index) => (
 						<TeamDistributionItem
@@ -62,12 +76,22 @@ class App extends React.Component {
 						/>
 					))}
 				</TeamDistribution>
+        <div className="row">
+          {this.state.data.map((profile) => (
+            <div className="col-6">
+              <ProfileCard
+                profile={profile}
+                key={profile._id}
+              />
+            </div>
+				))}
+        </div>
 				<ModalPerfil />
 				<ModalCrearPerfil />
 				<Footer />
 			</div>
-		)
-	}
+		);
+  }
 }
 
 export default App
