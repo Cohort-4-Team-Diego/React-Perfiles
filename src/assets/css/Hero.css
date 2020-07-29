@@ -1,11 +1,10 @@
 .Hero {
 	height: 100vh;
-	background: #4d4d4d;
+	background: #999999;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	background-image: url('../images/bamboo.png');
-	background-size: contain;
+	background-image: url('../images/bamboo-pixel-6.png');
 	background-repeat: no-repeat;
 	background-position: bottom;
 }
@@ -13,8 +12,8 @@
 	margin-top: 65px;
 	padding: 40px;
 	display: flex;
-	background-image: url('../images/leaf.png');
-	background-size: 40%;
+	background-image: url('../images/liana-bamboo.png');
+	background-size: 30%;
 	background-repeat: no-repeat;
 }
 
