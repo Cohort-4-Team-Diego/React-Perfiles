@@ -22,7 +22,8 @@ class App extends React.Component {
 			data: [],
 			loading: true,
 			error: null,
-			showCreatePerfilModal: false
+			showCreateProfileModal: false,
+			createProfileForm: {}
 		}
 	}
 
@@ -51,12 +52,21 @@ class App extends React.Component {
 		}
 	}
 
-	showCreatePerfilModal = () => {
-		this.setState({ showCreatePerfilModal: 'aparece' })
+	showCreateProfileModal = () => {
+		this.setState({ showCreateProfileModal: 'aparece' })
 	}
 
-	hideCreatePerfilModal = () => {
-		this.setState({ showCreatePerfilModal: '' })
+	hideCreateProfileModal = () => {
+		this.setState({ showCreateProfileModal: '' })
+	}
+
+	handleChangeCreateProfileForm = e => {
+		this.setState({
+			createProfileForm: {
+				...this.state.createProfileForm,
+				[e.target.name]: e.target.value
+			}
+		})
 	}
 
 	render() {
@@ -80,10 +90,12 @@ class App extends React.Component {
 						</div>
 					))}
 				</div>
-				<Footer showModal={this.showCreatePerfilModal} />
+				<Footer showModal={this.showCreateProfileModal} />
 				<ModalCrearPerfil
-					toggle={this.state.showCreatePerfilModal}
-					hideModal={this.hideCreatePerfilModal}
+					onChangeForm={this.handleChangeCreateProfileForm}
+					formValues={this.state.createProfileForm}
+					toggle={this.state.showCreateProfileModal}
+					hideModal={this.hideCreateProfileModal}
 				/>
 			</div>
 		)
