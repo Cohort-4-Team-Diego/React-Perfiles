@@ -50,18 +50,6 @@ class App extends React.Component {
 		}
 	}
 
-	//     this.setState({
-	//       loading: false,
-	//       data
-	//     })
-	//   } catch (error) {
-	//     this.setState({
-	//       loading: false,
-	//       error
-	//     })
-	//   }
-	// }
-
 	render() {
 		return (
 			<div className="App">
