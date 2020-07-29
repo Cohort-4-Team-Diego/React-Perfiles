@@ -27,25 +27,25 @@ const api = {
     list() {
       return callApi(PROFILES_PATH);
     },
-    create(badge) {
+    create(profile) {
       // throw new Error('500: Server error');
       return callApi(PROFILES_PATH, {
         method: 'POST',
-        body: JSON.stringify(badge),
+        body: JSON.stringify(profile),
       });
     },
-    read(badgeId) {
-      return callApi(`${PROFILES_PATH}/${badgeId}`);
+    read(profileId) {
+      return callApi(`${PROFILES_PATH}/${profileId}`);
     },
-    update(badgeId, updates) {
-      return callApi(`${PROFILES_PATH}/${badgeId}`, {
+    update(profileId, updates) {
+      return callApi(`${PROFILES_PATH}/${profileId}`, {
         method: 'PUT',
         body: JSON.stringify(updates),
       });
     },
     // Lo hubiera llamado `delete`, pero `delete` es un keyword en JavaScript asi que no es buena idea :P
-    remove(badgeId) {
-      return callApi(`${PROFILES_PATH}/${badgeId}`, {
+    remove(profileId) {
+      return callApi(`${PROFILES_PATH}/${profileId}`, {
         method: 'DELETE',
       });
     },

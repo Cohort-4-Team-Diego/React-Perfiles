@@ -3,12 +3,7 @@ import ReactDOM from "react-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWindowClose } from "@fortawesome/free-solid-svg-icons";
 
-const ModalCrearPerfil = ({
-  toggle,
-  hideModal,
-	onChangeForm,
-	formValues
-}) => {
+const ModalCrearPerfil = ({ toggle, hideModal, onChangeForm, formValues, handleSubmit }) => {
   const modalShow = `container_modal ${toggle}`;
   return ReactDOM.createPortal(
     <div id="cajaFooter" className={modalShow}>
@@ -28,18 +23,8 @@ const ModalCrearPerfil = ({
                   onChange={onChangeForm}
                   type="text"
                   id="name"
-									name="firstName"
-									value={formValues.firstName}
-                />
-              </div>
-              <div className="items-form">
-                <label htmlFor="lastName">Apellido</label>
-                <input
-                  onChange={onChangeForm}
-                  type="text"
-                  id="lastName"
-									name="lastName"
-									value={formValues.lastName}
+                  name="name"
+                  value={formValues.name}
                 />
               </div>
 
@@ -49,8 +34,8 @@ const ModalCrearPerfil = ({
                   onChange={onChangeForm}
                   type="text"
                   id="nacion"
-									name="country"
-									value={formValues.country}
+                  name="country"
+                  value={formValues.country}
                 />
               </div>
 
@@ -60,60 +45,114 @@ const ModalCrearPerfil = ({
                   onChange={onChangeForm}
                   type="text"
                   id="city"
-									name="city"
-									value={formValues.city}
+                  name="origin_city"
+                  value={formValues.origin_city}
                 />
               </div>
 
               <div className="items-form">
                 <label htmlFor="profilTech">Perfil Tecnico</label>
-                <input type="text" id="profilTech" />
+                <input
+                  onChange={onChangeForm}
+                  type="text"
+                  id="profilTech"
+                  name="technical_profile"
+                  value={formValues.technical_profile}
+                />
               </div>
 
               <div className="items-form">
-                <label htmlFor="question1">
+                <label htmlFor="description">
                   ¿En que quieres convertirte con la educación de Platzi Master?
                 </label>
-                <input type="text" id="question1" />
+                <input
+                  onChange={onChangeForm}
+                  type="text"
+                  id="description"
+                  name="description"
+                  value={formValues.description}
+                />
               </div>
 
               <div className="items-form">
-                <label htmlFor="question2">¿Cual es tu Superpoder?</label>
-                <input type="text" id="question2" />
+                <label htmlFor="superpower">¿Cual es tu Superpoder?</label>
+                <input
+                  onChange={onChangeForm}
+                  type="text"
+                  id="superpower"
+                  name="superpower"
+                  value={formValues.superpower}
+                />
               </div>
 
               <div className="items-form">
-                <label htmlFor="question3">¿Cual es tu debilidad?</label>
-                <input type="text" id="question3" />
+                <label htmlFor="weakness">¿Cual es tu debilidad?</label>
+                <input
+                  onChange={onChangeForm}
+                  type="text"
+                  id="weakness"
+                  name="weakness"
+                  value={formValues.weakness}
+                />
               </div>
 
               <div className="items-form">
                 <label htmlFor="email">Correo</label>
-                <input type="text" id="email" />
+                <input
+                  onChange={onChangeForm}
+                  type="text"
+                  id="email"
+                  name="email"
+                  value={formValues.email}
+                />
               </div>
 
               <div className="items-form">
-                <label htmlFor="github">Github</label>
-                <input type="text" id="github" />
+                <label htmlFor="github_profile">Github</label>
+                <input
+                  onChange={onChangeForm}
+                  type="text"
+                  id="github_profile"
+                  name="github_profile"
+                  value={formValues.github_profile}
+                />
               </div>
 
               <div className="items-form">
-                <label htmlFor="linkedin">Linkedin</label>
-                <input type="text" id="linkedin" />
+                <label htmlFor="platzi_profile">Usuario Platzi</label>
+                <input
+                  onChange={onChangeForm}
+                  type="text"
+                  id="platzi_profile"
+                  name="platzi_profile"
+                  value={formValues.platzi_profile}
+                />
               </div>
 
               <div className="items-form">
-                <label htmlFor="facebook">Facebook</label>
-                <input type="text" id="facebook" />
+                <label htmlFor="linkedin_profile">Linkedin</label>
+                <input
+                  onChange={onChangeForm}
+                  type="text"
+                  id="linkedin_profile"
+                  name="linkedin_profile"
+                  value={formValues.linkedin_profile}
+                />
               </div>
 
               <div className="items-form">
-                <label htmlFor="twitter">Twitter</label>
-                <input type="text" id="twitter" />
+                <label htmlFor="twitter_profile">Twitter</label>
+                <input
+                  onChange={onChangeForm}
+                  type="text"
+                  id="twitter_profile"
+                  name="twitter_profile"
+                  value={formValues.twitter_profile}
+                />
               </div>
 
-              <button className="modal-in" onClick={hideModal}>
-                Enviar y Salir
+              <button className="modal-in" onClick={handleSubmit}>
+                Enviar
               </button>
             </form>
           </div>
