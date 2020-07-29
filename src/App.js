@@ -50,23 +50,23 @@ class App extends React.Component {
 		}
 	}
 
-      this.setState({
-        loading: false,
-        data
-      })
-    } catch (error) {
-      this.setState({
-        loading: false,
-        error
-      })
-    }
-  }
+	//     this.setState({
+	//       loading: false,
+	//       data
+	//     })
+	//   } catch (error) {
+	//     this.setState({
+	//       loading: false,
+	//       error
+	//     })
+	//   }
+	// }
 
-  render() {
-    return (
+	render() {
+		return (
 			<div className="App">
 				<Header />
-        <Hero />
+				<Hero />
 				<TeamDistribution>
 					{this.state.data.map((profile, index) => (
 						<TeamDistributionItem
@@ -76,22 +76,19 @@ class App extends React.Component {
 						/>
 					))}
 				</TeamDistribution>
-        <div className="row">
-          {this.state.data.map((profile) => (
-            <div className="col-6">
-              <ProfileCard
-                profile={profile}
-                key={profile._id}
-              />
-            </div>
-				))}
-        </div>
+				<div className="row">
+					{this.state.data.map((profile) => (
+						<div className="col-6">
+							<ProfileCard profile={profile} key={profile._id} />
+						</div>
+					))}
+				</div>
 				<ModalPerfil />
 				<ModalCrearPerfil />
 				<Footer />
 			</div>
-		);
-  }
+		)
+	}
 }
 
 export default App
