@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/images/Logo-Cohort-No-Background.png'
+import logo from '../assets/images/logoPandev.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 const Header = () => {
@@ -13,13 +13,20 @@ const Header = () => {
 						alt="Este es un logo"
 					/>
 				</a>
+				<p className="logo-nombre-toggle">
+					Pan<span>Devs</span>
+				</p>
+
 				<div className="toggle">
 					<div className="menu">
 						<img
 							className="logo-toggle"
-							src="assets/images/Logo-Cohort-No-Background.png"
+							src={logo}
 							alt="Este es un logo"
 						/>
+						<p className="logo-nombre">
+							Pan<span>Devs</span>
+						</p>
 						<FontAwesomeIcon icon={faBars} />
 					</div>
 				</div>
