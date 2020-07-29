@@ -22,6 +22,7 @@ class App extends React.Component {
 			data: [],
 			loading: true,
 			error: null,
+			showCreatePerfilModal: false
 		}
 	}
 
@@ -50,17 +51,13 @@ class App extends React.Component {
 		}
 	}
 
-	//     this.setState({
-	//       loading: false,
-	//       data
-	//     })
-	//   } catch (error) {
-	//     this.setState({
-	//       loading: false,
-	//       error
-	//     })
-	//   }
-	// }
+	showCreatePerfilModal = () => {
+		this.setState({ showCreatePerfilModal: 'aparece' })
+	}
+
+	hideCreatePerfilModal = () => {
+		this.setState({ showCreatePerfilModal: '' })
+	}
 
 	render() {
 		return (
@@ -83,9 +80,11 @@ class App extends React.Component {
 						</div>
 					))}
 				</div>
-				<ModalPerfil />
-				<ModalCrearPerfil />
-				<Footer />
+				<Footer showModal={this.showCreatePerfilModal} />
+				<ModalCrearPerfil
+					toggle={this.state.showCreatePerfilModal}
+					hideModal={this.hideCreatePerfilModal}
+				/>
 			</div>
 		)
 	}
