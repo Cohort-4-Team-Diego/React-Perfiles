@@ -10,7 +10,6 @@ import TeamDistribution from './components/TeamDistribution'
 import TeamDistributionItem from './components/TeamDistributionItem'
 import Footer from './components/Footer'
 import ModalCrearPerfil from './components/ModalCrearPerfil.jsx'
-import ModalPerfil from './components/ModalPerfil.jsx'
 import api from './api'
 
 import ProfileCard from './components/ProfileCard'
@@ -22,6 +21,8 @@ class App extends React.Component {
 			data: [],
 			loading: true,
 			error: null,
+			showCreateProfileModal: false,
+			createProfileForm: {}
 		}
 	}
 
@@ -40,6 +41,7 @@ class App extends React.Component {
 
 			this.setState({
 				loading: false,
+				showCreateProfileModal: '',
 				data,
 			})
 		} catch (error) {
@@ -50,6 +52,47 @@ class App extends React.Component {
 		}
 	}
 
+	showCreateProfileModal = () => {
+		this.setState({ showCreateProfileModal: 'aparece' })
+	}
+
+	hideCreateProfileModal = () => {
+		this.setState({ showCreateProfileModal: '' })
+	}
+
+	handleChangeCreateProfileForm = e => {
+		this.setState({
+			createProfileForm: {
+				...this.state.createProfileForm,
+				[e.target.name]: e.target.value,
+				role: 'NA',
+				birthdate: '1990-01-01',
+				facebook: 'NA'
+			}
+		})
+	}
+
+	handleSubmitProfile = async (e) => {
+		e.preventDefault();
+		this.setState({
+			loading: true,
+			error: null,
+		})
+
+    try {
+			console.log('Form: ', this.state.createProfileForm)
+			await api.profiles.create(this.state.createProfileForm)
+			this.fetchData();
+
+		} catch (error) {
+			console.log(error);
+			this.setState({
+				loading: false,
+				error: error
+			})
+		}
+	}
+  
 	render() {
 		return (
 			<div className="App">
@@ -71,9 +114,14 @@ class App extends React.Component {
 						</div>
 					))}
 				</div>
-				<ModalPerfil />
-				<ModalCrearPerfil />
-				<Footer />
+				<Footer showModal={this.showCreateProfileModal} />
+				<ModalCrearPerfil
+					onChangeForm={this.handleChangeCreateProfileForm}
+					formValues={this.state.createProfileForm}
+					toggle={this.state.showCreateProfileModal}
+					hideModal={this.hideCreateProfileModal}
+					handleSubmit={this.handleSubmitProfile}
+				/>
 			</div>
 		)
 	}
