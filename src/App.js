@@ -14,6 +14,32 @@ import api from './api'
 
 import ProfileCard from './components/ProfileCard'
 
+const defaultValues = {
+	role: 'NA',
+	birthdate: '1990-01-01',
+	facebook: 'NA'
+}
+
+const defaultEmpty =  {
+	_id: "",
+	name: "",
+	birthdate: "1990-01-01",
+	origin_city: "",
+	country: "",
+	technical_profile: "",
+	platzi_profile: "",
+	twitter_profile: "",
+	linkedin_profile: "",
+	github_profile: "",
+	role: "NA",
+	superpower: "",
+	weakness: "",
+	description: "",
+	photo: "",
+	email: "",
+	facebook: "NA",
+}
+
 class App extends React.Component {
 	constructor() {
 		super()
@@ -21,7 +47,8 @@ class App extends React.Component {
 			data: [],
 			loading: true,
 			error: null,
-			showCreateProfileModal: false,
+			showCreateProfileModal: '',
+			editMode: false,
 			createProfileForm: {}
 		}
 	}
@@ -53,10 +80,40 @@ class App extends React.Component {
 	}
 
 	showCreateProfileModal = () => {
-		this.setState({ showCreateProfileModal: 'aparece' })
+		this.setState({
+			showCreateProfileModal: 'aparece',
+			createProfileForm: {...defaultEmpty},
+			editMode: false
+		})
 	}
 
-	hideCreateProfileModal = () => {
+	showEditProfileModal = async (id) => {
+		this.setState({
+			loading: true,
+			error: null,
+		})
+
+		try {
+			const profile = await api.profiles.read(id);
+
+			this.setState({
+				showCreateProfileModal: 'aparece',
+				createProfileForm: {...profile},
+				editMode: true,
+				loading: false
+			})
+
+		} catch (error) {
+
+			this.setState({
+				loading: false,
+				error: error,
+			})
+
+		}
+	}
+
+	hideCreateProfileModal = (id) => {
 		this.setState({ showCreateProfileModal: '' })
 	}
 
@@ -64,10 +121,8 @@ class App extends React.Component {
 		this.setState({
 			createProfileForm: {
 				...this.state.createProfileForm,
-				[e.target.name]: e.target.value,
-				role: 'NA',
-				birthdate: '1990-01-01',
-				facebook: 'NA'
+				...defaultValues,
+				[e.target.name]: e.target.value
 			}
 		})
 	}
@@ -80,10 +135,8 @@ class App extends React.Component {
 		})
 
     try {
-			console.log('Form: ', this.state.createProfileForm)
 			await api.profiles.create(this.state.createProfileForm)
 			this.fetchData();
-
 		} catch (error) {
 			console.log(error);
 			this.setState({
@@ -92,7 +145,43 @@ class App extends React.Component {
 			})
 		}
 	}
-  
+
+	handleUpdate = async (e, id) => {
+		e.preventDefault();
+		this.setState({
+			loading: true,
+			error: null,
+		})
+
+    try {
+			await api.profiles.update(id, this.state.createProfileForm)
+			this.fetchData();
+		} catch (error) {
+			this.setState({
+				loading: false,
+				error: error
+			})
+		}
+	}
+
+	handleDelete = async (e, id) => {
+		e.preventDefault();
+		this.setState({
+			loading: true,
+			error: null,
+		})
+
+    try {
+			await api.profiles.remove(id, this.state.createProfileForm)
+			this.fetchData();
+		} catch (error) {
+			this.setState({
+				loading: false,
+				error: error
+			})
+		}
+	}
+
 	render() {
 		return (
 			<div className="App">
@@ -103,24 +192,31 @@ class App extends React.Component {
 						<TeamDistributionItem
 							profile={profile}
 							classPosition={`img-${index + 1}`}
-							key={profile._id}
+							key={profile.id}
 						/>
 					))}
 				</TeamDistribution>
 				<div className="row">
 					{this.state.data.map((profile) => (
-						<div className="col-6">
-							<ProfileCard profile={profile} key={profile._id} />
+						<div className="col-12 col-xl-6">
+							<ProfileCard
+								showModal={this.showEditProfileModal}
+								profile={profile}
+								key={profile._id}
+							/>
 						</div>
 					))}
 				</div>
 				<Footer showModal={this.showCreateProfileModal} />
 				<ModalCrearPerfil
+					editMode={this.state.editMode}
+					handleUpdate={this.handleUpdate}
 					onChangeForm={this.handleChangeCreateProfileForm}
 					formValues={this.state.createProfileForm}
 					toggle={this.state.showCreateProfileModal}
 					hideModal={this.hideCreateProfileModal}
 					handleSubmit={this.handleSubmitProfile}
+					handleDelete={this.handleDelete}
 				/>
 			</div>
 		)

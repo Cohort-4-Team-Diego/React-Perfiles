@@ -39,7 +39,7 @@ const api = {
     },
     update(profileId, updates) {
       return callApi(`${PROFILES_PATH}/${profileId}`, {
-        method: 'PUT',
+        method: 'PATCH',
         body: JSON.stringify(updates),
       });
     },
