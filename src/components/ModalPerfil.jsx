@@ -44,7 +44,7 @@ const ModalPerfil = ({ toggle, hideModal, profile }) => {
 									<strong>Nombre: </strong> {profile.name}
 								</p>
 								<p id="nacionalidad">
-									<strong>Nacionalidad: </strong> {profile.country} {profile.country.toLowerCase() === 'colombia' ? '🇨🇴': '🇲🇽' }
+									<strong>Nacionalidad: </strong> {profile.country} 
 								</p>
 								<p id="ciudadOrigen">
 									<strong>Ciudad origen: </strong> {profile.origin_city}

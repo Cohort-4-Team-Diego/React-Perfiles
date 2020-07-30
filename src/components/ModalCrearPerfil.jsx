@@ -151,6 +151,14 @@ const ModalCrearPerfil = ({ toggle, hideModal, onChangeForm, formValues, handleS
                 />
               </div>
 
+              <input
+                  onChange={onChangeForm}
+                  type="file"
+                  id="photo"
+                  name="photo"
+                  value={formValues.photo}
+                />
+
               <button className="modal-in" onClick={handleSubmit}>
                 Enviar
               </button>
