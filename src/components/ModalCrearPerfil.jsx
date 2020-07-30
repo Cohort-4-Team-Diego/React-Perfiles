@@ -3,7 +3,16 @@ import ReactDOM from "react-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWindowClose } from "@fortawesome/free-solid-svg-icons";
 
-const ModalCrearPerfil = ({ toggle, hideModal, onChangeForm, formValues, handleSubmit }) => {
+const ModalCrearPerfil = ({
+  toggle,
+  hideModal,
+  onChangeForm,
+  formValues,
+  handleSubmit,
+  editMode,
+  handleUpdate,
+  handleDelete
+}) => {
   const modalShow = `container_modal ${toggle}`;
   return ReactDOM.createPortal(
     <div id="cajaFooter" className={modalShow}>
@@ -27,7 +36,6 @@ const ModalCrearPerfil = ({ toggle, hideModal, onChangeForm, formValues, handleS
                   value={formValues.name}
                 />
               </div>
-
               <div className="items-form">
                 <label htmlFor="nacion">Nacionalidad</label>
                 <input
@@ -38,7 +46,6 @@ const ModalCrearPerfil = ({ toggle, hideModal, onChangeForm, formValues, handleS
                   value={formValues.country}
                 />
               </div>
-
               <div className="items-form">
                 <label htmlFor="city">Ciudad de Origen</label>
                 <input
@@ -49,7 +56,6 @@ const ModalCrearPerfil = ({ toggle, hideModal, onChangeForm, formValues, handleS
                   value={formValues.origin_city}
                 />
               </div>
-
               <div className="items-form">
                 <label htmlFor="profilTech">Perfil Tecnico</label>
                 <input
@@ -60,7 +66,6 @@ const ModalCrearPerfil = ({ toggle, hideModal, onChangeForm, formValues, handleS
                   value={formValues.technical_profile}
                 />
               </div>
-
               <div className="items-form">
                 <label htmlFor="description">
                   ¿En que quieres convertirte con la educación de Platzi Master?
@@ -73,7 +78,6 @@ const ModalCrearPerfil = ({ toggle, hideModal, onChangeForm, formValues, handleS
                   value={formValues.description}
                 />
               </div>
-
               <div className="items-form">
                 <label htmlFor="superpower">¿Cual es tu Superpoder?</label>
                 <input
@@ -84,7 +88,6 @@ const ModalCrearPerfil = ({ toggle, hideModal, onChangeForm, formValues, handleS
                   value={formValues.superpower}
                 />
               </div>
-
               <div className="items-form">
                 <label htmlFor="weakness">¿Cual es tu debilidad?</label>
                 <input
@@ -95,7 +98,6 @@ const ModalCrearPerfil = ({ toggle, hideModal, onChangeForm, formValues, handleS
                   value={formValues.weakness}
                 />
               </div>
-
               <div className="items-form">
                 <label htmlFor="email">Correo</label>
                 <input
@@ -106,7 +108,6 @@ const ModalCrearPerfil = ({ toggle, hideModal, onChangeForm, formValues, handleS
                   value={formValues.email}
                 />
               </div>
-
               <div className="items-form">
                 <label htmlFor="github_profile">Github</label>
                 <input
@@ -117,7 +118,6 @@ const ModalCrearPerfil = ({ toggle, hideModal, onChangeForm, formValues, handleS
                   value={formValues.github_profile}
                 />
               </div>
-
               <div className="items-form">
                 <label htmlFor="platzi_profile">Usuario Platzi</label>
                 <input
@@ -128,7 +128,6 @@ const ModalCrearPerfil = ({ toggle, hideModal, onChangeForm, formValues, handleS
                   value={formValues.platzi_profile}
                 />
               </div>
-
               <div className="items-form">
                 <label htmlFor="linkedin_profile">Linkedin</label>
                 <input
@@ -139,7 +138,6 @@ const ModalCrearPerfil = ({ toggle, hideModal, onChangeForm, formValues, handleS
                   value={formValues.linkedin_profile}
                 />
               </div>
-
               <div className="items-form">
                 <label htmlFor="twitter_profile">Twitter</label>
                 <input
@@ -150,10 +148,21 @@ const ModalCrearPerfil = ({ toggle, hideModal, onChangeForm, formValues, handleS
                   value={formValues.twitter_profile}
                 />
               </div>
+              {editMode ? (
+                <React.Fragment>
+                <button className="modal-in" onClick={(e) => handleUpdate(e, formValues._id)}>
+                  Actualizar
+                </button>
 
-              <button className="modal-in" onClick={handleSubmit}>
-                Enviar
-              </button>
+                <button className="modal-in" onClick={(e) => handleDelete(e, formValues._id)}>
+                  Delete
+                </button>
+                </React.Fragment>
+              ) : (
+                <button className="modal-in" onClick={handleSubmit}>
+                  Crear
+                </button>
+              )}
             </form>
           </div>
         </div>
