@@ -7,7 +7,7 @@ import { faTwitter, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-ic
 const ProfileCard = (props) => {
     const { profile, showModal } = props
     return (
-        <div className="profile">
+        <div id="description" className="profile">
             <div className="profile__item">
             </div>
             <div className="profile__img-container">

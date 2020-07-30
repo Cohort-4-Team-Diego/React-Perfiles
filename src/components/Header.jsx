@@ -37,6 +37,11 @@ const Header = () => {
 						</a>
 					</li>
 					<li>
+						<a className="item-li team-description" href="#description">
+							Detalles
+						</a>
+					</li>
+					<li>
 						<a className="item-li contact-nav" href="#contact">
 							Contacto
 						</a>

@@ -1,5 +1,5 @@
 import React from 'react';
-import logoNoTexto from '../assets/images/Logo-Texto-No-Fondo.png';
+import logoNoTexto from '../assets/images/PanDevs-only-panda.png';
 
 const TeamDistribution = ({children}) => {
     return (

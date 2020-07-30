@@ -23,7 +23,11 @@ const ModalCrearPerfil = ({
           </a>
         </div>
         <div className="container_modal--caja">
-          <h2>Registro de nuevo tripulante</h2>
+          {editMode ? (
+            <h2>Actualizar Datos del Miembro</h2>
+          ) : (
+            <h2>Registrar Datos del Nuevo Miembro</h2>
+          )}
           <div className="carrusel">
             <form action="" className="formulario">
               <div className="items-form">
@@ -150,16 +154,16 @@ const ModalCrearPerfil = ({
               </div>
               {editMode ? (
                 <React.Fragment>
-                <button className="modal-in" onClick={(e) => handleUpdate(e, formValues._id)}>
+                <button className="modal-in update-button" onClick={(e) => handleUpdate(e, formValues._id)}>
                   Actualizar
                 </button>
 
-                <button className="modal-in" onClick={(e) => handleDelete(e, formValues._id)}>
-                  Delete
+                <button className="modal-in delete-button" onClick={(e) => handleDelete(e, formValues._id)}>
+                  Borrar
                 </button>
                 </React.Fragment>
               ) : (
-                <button className="modal-in" onClick={handleSubmit}>
+                <button className="modal-in create-button" onClick={handleSubmit}>
                   Crear
                 </button>
               )}

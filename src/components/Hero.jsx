@@ -10,9 +10,6 @@ const Hero = () => {
 	return (
 		<section className="Hero">
 			<div className="superior">
-				<figure>
-					<img src="" alt="" />
-				</figure>
 				<div className="Hero-container">
 					<figure className="Hero-img">
 						<img src={logoPanDev} alt="logo" />
@@ -24,7 +21,7 @@ const Hero = () => {
 						Somos miembros del Cohort 4 de Platzi Master y estamos
 						aquí para hacer tus proyectos una realdad
 					</h2>
-					<button className="Hero-button">Conócenos</button>
+					<a className="Hero-button" href="#team-cohort">Conócenos</a>
 				</div>
 			</div>
 			<div className="inferior">
