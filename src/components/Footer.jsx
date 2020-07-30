@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUserPlus } from '@fortawesome/free-solid-svg-icons'
 
 const Footer = ({showModal}) => {
   return (
@@ -20,7 +22,7 @@ const Footer = ({showModal}) => {
               className="modal-footer-new-member"
               onClick={showModal}
             >
-              <i className="fas fa-user-plus"></i> Nuevo Miembro
+              <FontAwesomeIcon icon={faUserPlus} /> Nuevo Miembro
             </a>
           </li>
         </ul>

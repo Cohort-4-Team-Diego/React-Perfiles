@@ -126,8 +126,8 @@ section {
 .team-distribution .img-9 {
 	grid-column: 2/4;
 	grid-row: 2/4;
-	width: 95%;
-	height: 70%;
+	width: 80%;
+	height: 80%;
 	justify-self: center;
 	align-self: center;
 }
@@ -203,7 +203,11 @@ section {
 	}
 
 	.team-distribution .img-9 img {
-		height: 133%;
-		width: 72%;
+		height: 150%;
+		width: 75%;
+	}
+
+	.team-distribution button h2 {
+		font-size: 20px;
 	}
 }
