@@ -1,6 +1,6 @@
 :root{
-    --primary-color:#f1d145;
-    --secondary-color: #333642;
+    --primary-color:#ffffff;
+    --secondary-color: #3e5f3a;
     --tertiary-color: #545869;
 }
 
@@ -14,10 +14,9 @@
 }
 a{
     color: white;
-
 }
 .footer{
-    background:linear-gradient(#333642,black) ;
+    background:#55834f;
     color: white;
     outline: none;
     text-decoration: none;
