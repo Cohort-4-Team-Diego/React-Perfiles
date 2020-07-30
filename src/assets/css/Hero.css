@@ -1,5 +1,5 @@
 .Hero {
-	height: 100vh;
+	height: 100%;
 	background: #999999;
 	display: flex;
 	flex-direction: column;
@@ -10,10 +10,10 @@
 }
 .superior {
 	margin-top: 65px;
-	padding: 40px;
+	padding: 40px 40px 0 40px;
 	display: flex;
-	background-image: url('../images/liana-bamboo.png');
-	background-size: 30%;
+	background-image: url('../images/liana-bamboo-doble.png');
+	background-size: 100% 70%;
 	background-repeat: no-repeat;
 }
 
@@ -62,17 +62,19 @@
 }
 
 .Hero-logos {
+	width: 100%;
 	display: flex;
 	gap: 8vw;
 	align-items: center;
+	justify-content: center;
 }
 
 .Hero-logos_html {
-	width: 10vw;
+	width: 8vw;
 }
 
 .Hero-logos_css {
-	width: 7vw;
+	width: 10vw;
 }
 
 .Hero-logos_react {
@@ -88,11 +90,20 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+	.Hero-logos{
+		gap: 6vw
+	}
+	.superior {
+		background-size: 100% 45%;
+	}
+	
 	.Hero-logos_github {
 		width: 26vw;
 	}
+
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
+
 	.Hero-button {
 		font-size: 22px;
 		padding: 0 10px;

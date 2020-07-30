@@ -38,7 +38,8 @@ nav {
 	width: 100%;
 	background-color: var(--navbar-gray-background-color);
 	box-shadow: 0px 5px 5px var(--navbar-shadow-color);
-	position: fixed;
+	position: absolute;
+	top: 0;
 	z-index: 1;
 	text-align: right;
 	display: flex;
@@ -46,7 +47,7 @@ nav {
 }
 
 nav a .logo-initial {
-	width: 75px;
+	width: 65px;
 	height: auto;
 	padding-left: 12.5%;
 	padding-top: 5%;
