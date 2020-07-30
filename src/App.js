@@ -1,4 +1,5 @@
 import React from 'react'
+import Swal from 'sweetalert2';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 import './assets/css/profile-picture.css'
@@ -134,11 +135,33 @@ class App extends React.Component {
 			error: null,
 		})
 
+		const loadingSwal = Swal.fire({
+			onBeforeOpen: () => {
+				Swal.showLoading()
+			}
+		})
+
     try {
 			await api.profiles.create(this.state.createProfileForm)
-			this.fetchData();
+			await this.fetchData();
+
+			loadingSwal.close();
+
+			Swal.fire({
+				icon: 'success',
+				title: 'Operación Exitosa',
+			})
+
 		} catch (error) {
-			console.log(error);
+			console.log(error)
+
+			loadingSwal.close();
+
+			Swal.fire({
+				icon: 'error',
+				title: 'Se produjo un error. Intente de nuevo',
+			})
+
 			this.setState({
 				loading: false,
 				error: error
@@ -153,10 +176,30 @@ class App extends React.Component {
 			error: null,
 		})
 
+		const loadingSwal = Swal.fire({
+			onBeforeOpen: () => {
+				Swal.showLoading()
+			}
+		})
+
     try {
 			await api.profiles.update(id, this.state.createProfileForm)
-			this.fetchData();
+			await this.fetchData();
+
+			loadingSwal.close()
+
+			Swal.fire({
+				icon: 'success',
+				title: 'Operación Exitosa',
+			})
 		} catch (error) {
+			loadingSwal.close()
+
+			Swal.fire({
+				icon: 'error',
+				title: 'Se produjo un error. Intente de nuevo',
+			})
+
 			this.setState({
 				loading: false,
 				error: error
@@ -171,10 +214,30 @@ class App extends React.Component {
 			error: null,
 		})
 
+		const loadingSwal = Swal.fire({
+			onBeforeOpen: () => {
+				Swal.showLoading()
+			}
+		})
+
     try {
 			await api.profiles.remove(id, this.state.createProfileForm)
-			this.fetchData();
+			await this.fetchData();
+
+			loadingSwal.close()
+
+			Swal.fire({
+				icon: 'success',
+				title: 'Operación Exitosa',
+			})
 		} catch (error) {
+			loadingSwal.close()
+
+			Swal.fire({
+				icon: 'error',
+				title: 'Se produjo un error. Intente de nuevo',
+			})
+			
 			this.setState({
 				loading: false,
 				error: error

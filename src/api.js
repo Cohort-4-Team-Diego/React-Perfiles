@@ -28,7 +28,6 @@ const api = {
       return callApi(PROFILES_PATH);
     },
     create(profile) {
-      // throw new Error('500: Server error');
       return callApi(PROFILES_PATH, {
         method: 'POST',
         body: JSON.stringify(profile),
