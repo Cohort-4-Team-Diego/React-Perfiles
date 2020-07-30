@@ -3,9 +3,10 @@
     height: 600px;
     width: 100%;
     background-color: white;
-    grid-template-columns: 10% 5% 30% 45% 10% ;
-    grid-template-rows: 10% 10% 60% 10% 10%;
+    grid-template-columns: 1% 5% 30% 45% 1% ;
+    grid-template-rows: 1% 10% 60% 10% 1%;
     color: white;
+    justify-content: center;
 }
 
 .profile__item{
@@ -35,6 +36,10 @@
     align-items: center;
     justify-content: center;
     padding: 0 1.5rem;
+}
+
+.profile__content button{
+    border: none;
 }
 
 .profile__content h2{
