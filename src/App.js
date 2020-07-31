@@ -265,9 +265,9 @@ class App extends React.Component {
 						/>
 					))}
 				</TeamDistribution>
-				<div className="row">
+				<div className="row profile-mobile">
 					{this.state.data.map((profile) => (
-						<div className="col-12 col-xl-6">
+						<div className="col-12 col-xl-6 profile-container-mobile">
 							<ProfileCard
 								showModal={this.showEditProfileModal}
 								profile={profile}
