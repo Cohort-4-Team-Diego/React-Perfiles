@@ -16,6 +16,7 @@ a{
     color: white;
 }
 .footer{
+    position: relative;
     background:#55834f;
     color: white;
     outline: none;
