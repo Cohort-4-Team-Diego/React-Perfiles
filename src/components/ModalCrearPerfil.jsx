@@ -11,7 +11,7 @@ const ModalCrearPerfil = ({
   handleSubmit,
   editMode,
   handleUpdate,
-  handleDelete
+  handleDelete,
 }) => {
   const modalShow = `container_modal ${toggle}`;
   return ReactDOM.createPortal(
@@ -23,7 +23,11 @@ const ModalCrearPerfil = ({
           </a>
         </div>
         <div className="container_modal--caja">
-          <h2>Registro de nuevo tripulante</h2>
+          {editMode ? (
+            <h2>Actualizar Datos del Miembro</h2>
+          ) : (
+            <h2>Registrar Datos del Nuevo Miembro</h2>
+          )}
           <div className="carrusel">
             <form action="" className="formulario">
               <div className="items-form">
@@ -64,6 +68,26 @@ const ModalCrearPerfil = ({
                   id="profilTech"
                   name="technical_profile"
                   value={formValues.technical_profile}
+                />
+              </div>
+              <div className="items-form">
+                <label htmlFor="role">Rol</label>
+                <input
+                  onChange={onChangeForm}
+                  type="text"
+                  id="role"
+                  name="role"
+                  value={formValues.role}
+                />
+              </div>
+              <div className="items-form">
+                <label htmlFor="photo">Enlace de Foto</label>
+                <input
+                  onChange={onChangeForm}
+                  type="text"
+                  id="photo"
+                  name="photo"
+                  value={formValues.photo}
                 />
               </div>
               <div className="items-form">
@@ -150,16 +174,27 @@ const ModalCrearPerfil = ({
               </div>
               {editMode ? (
                 <React.Fragment>
-                <button className="modal-in" onClick={(e) => handleUpdate(e, formValues._id)}>
-                  Actualizar
-                </button>
+                  <button
+                    className="modal-in update-button"
+                    onClick={(e) => handleUpdate(e, formValues._id)}
+                  >
+                    Actualizar
+                  </button>
 
-                <button className="modal-in" onClick={(e) => handleDelete(e, formValues._id)}>
-                  Delete
-                </button>
+                  {!formValues.main && (
+                    <button
+                      className="modal-in delete-button"
+                      onClick={(e) => handleDelete(e, formValues._id)}
+                    >
+                      Borrar
+                    </button>
+                  )}
                 </React.Fragment>
               ) : (
-                <button className="modal-in" onClick={handleSubmit}>
+                <button
+                  className="modal-in create-button"
+                  onClick={handleSubmit}
+                >
                   Crear
                 </button>
               )}

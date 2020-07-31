@@ -16,6 +16,7 @@ a{
     color: white;
 }
 .footer{
+    position: relative;
     background:#55834f;
     color: white;
     outline: none;
@@ -26,7 +27,6 @@ a{
     z-index: 1;
     display: grid;
     grid-template-columns: 1fr 10fr 1fr;
-
 }
 .lista1{
     display:none;
@@ -150,12 +150,12 @@ a{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: lightgrey;
+    background-color: var(--secondary-color);
     height: 70vh;
     width: 70vw;
     box-shadow: 3px 3px 8px black;
     border-radius: 20px;
-    color: black;
+    color: white;
 }
 
 .modal-social-icons{
@@ -173,6 +173,10 @@ a{
     height: 40px;
     width: 40px;
     padding-right: 10vw;
+}
+
+.github:hover{
+    background-image: url("../../assets/images/icons8-github-100-gray.png");
 }
 .Platzi{
     background-image: url("https://static.platzi.com/mf-landings/image/isotipoPlatzi-442ccc1186a9806e18c9889cc301ffe1.png");
@@ -206,6 +210,7 @@ a{
     color: red;
 }
 
+
 .onedrive{
     background-image: url("../..//assets/images/icons8-google-drive-240.png");
     background-position: center;
@@ -225,6 +230,9 @@ a{
     padding-right: 10vw;
 }
 
+.correo:hover{
+    background-image: url("../..//assets/images/icons8-email-80-gray.png");
+}
 #contact .list-item-new-member{
     text-align: center;
 }
@@ -239,7 +247,6 @@ a{
 }
 
 #contact .modal-footer-new-member:hover{
-    text-decoration: underline;
     color: rgb(175, 172, 172);
 }
 
@@ -248,16 +255,18 @@ a{
     display:grid;
     grid-template-columns: 1fr 1fr;
     white-space: wrap;
-
-
 }
 
+
+.formulario label {
+    color: white;
+}
 .items-form{
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 16%;
     padding: 20px;
-    color:blACK;
+    color:black;
 
 }
 .items-form input{
@@ -267,6 +276,11 @@ a{
     border-radius: 10px;
     box-shadow: 1px 1px 6px black;
 }
+
+.items-form input[type="text"]{
+    padding: 10px;
+}
+
 .modal-in{
     height: 100%;
     width: 50%;
@@ -279,14 +293,39 @@ a{
     color: aliceblue;
 }
 
+.formulario .create-button{
+    background-color: #7CAE76;
+    margin-bottom: 10px;
+}
+.formulario .create-button:hover{
+    background-color: #5c8058;
+}
+
+.formulario .update-button{
+    background-color: #F2D557;
+    margin-bottom: 10px;
+}
+
+.formulario .update-button:hover{
+    background-color: #bba543;
+}
+
+.formulario .delete-button{
+    background-color: #ac3535;
+    margin-bottom: 10px;
+}
+.formulario .delete-button:hover{
+    background-color: #792727;
+}
+
 .carrusel {
-    width: 90%;
+    width: 97%;
     height: 60vh;
     overflow-y: scroll;
 }
 
 .carrusel-perfil{
-    width: 90%;
+    width: 97%;
     height: 60vh;
     overflow-y: scroll;
 }
@@ -339,6 +378,10 @@ a{
     .lista1 {
         flex-wrap: wrap;
     }
+    .profile-mobile{
+        margin: 0;
+    }
+
 }
 
 @media screen and (min-width: 767px) and (max-width: 1023px) {
@@ -355,12 +398,21 @@ a{
         margin-right: 0;
     }
 
+    .carrusel{
+        overflow-y: scroll;
+        height: 50vh;
+    }
+
     .container_modal--caja h2{
         padding-top: 10px;
     }
     
     .footer{
         height: 11vh;
+    }
+
+    .profile-mobile{
+        margin: 0;
     }
 }
 
@@ -421,5 +473,9 @@ a{
 
     .abrirlista1{
         margin: 0 10px;
+    }
+
+    .profile-mobile{
+        margin: 0;
     }
 }

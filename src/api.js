@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:5000';
+const BASE_URL = 'https://perfiles.infomega.biz';
 const PROFILES_PATH = '/profiles';
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
@@ -28,7 +28,6 @@ const api = {
       return callApi(PROFILES_PATH);
     },
     create(profile) {
-      // throw new Error('500: Server error');
       return callApi(PROFILES_PATH, {
         method: 'POST',
         body: JSON.stringify(profile),

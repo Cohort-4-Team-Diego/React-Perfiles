@@ -21,6 +21,9 @@ html {
 	scroll-behavior: smooth;
 }
 
+html, body{
+	height: 100%;
+}
 /* Header */
 
 .toggle {
@@ -124,6 +127,9 @@ nav .ulNavbar li a {
 	.ulNavbar {
 		width: 100%;
 		display: none;
+	}
+	.ulNavbar--active {
+		display: block;
 	}
 
 	.ulNavbar li {

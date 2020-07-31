@@ -26,7 +26,7 @@ const ModalPerfil = ({ toggle, hideModal, profile }) => {
 					<div className="carrusel-perfil">
 						<div className="row">
 							<div className="col-12 text-center">
-								<h1>Cohort 4 Diego</h1>
+								<h1>PanDevs</h1>
 							</div>
 						</div>
 						<div className="row mt-3">

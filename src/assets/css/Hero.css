@@ -53,6 +53,13 @@
 	border-radius: 10px;
 	text-transform: uppercase;
 	color: #55834f;
+	transition-duration: 0.3s;
+}
+.Hero-button:hover{
+	text-decoration: none;
+	color:#385734;
+	border: 5px solid #385734;
+	background: #d3cece;
 }
 
 .inferior {
@@ -128,7 +135,7 @@
 		gap: 4vw;
 	}
 	.Hero-logos_html {
-		width: 13vw;
+		width: 8vw;
 	}
 
 	.Hero-logos_css {
