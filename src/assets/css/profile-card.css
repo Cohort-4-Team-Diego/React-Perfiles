@@ -67,35 +67,39 @@
 }
 
 @media screen and (min-width: 767px) and (max-width: 1023px) {
+    .profile-mobile {
+        display: block;
+    }
+
     .profile__img-container{
         height: 80%;
         margin-top: 50px;
     }
 
     .profile-container-mobile{
-        /* margin-bottom: -110px; */
+        position: initial;
+        max-height: 500px;
     }
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
+    .profile-mobile {
+        display: flex;
+    }
+
     .profile {
-        grid-template-columns: 1fr;
-        grid-template-rows: 15rem minmax(min-content, max-content);
-        margin: 2rem 0 ;
-    }
-
-    .profile__img-container{
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    .profile__content, .profile__item{
-        grid-column: 1;
-        grid-row: 2;
+       display: block;
+       height: auto;
+       margin: 2rem 0;
     }
 
     .profile__content {
         padding: 7% 6%;
+        background-color: #588B2D;
+    }
+
+    .profile-container-mobile{
+        position: initial;
     }
 
 }
