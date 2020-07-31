@@ -71,6 +71,26 @@ const ModalCrearPerfil = ({
                 />
               </div>
               <div className="items-form">
+                <label htmlFor="role">Rol</label>
+                <input
+                  onChange={onChangeForm}
+                  type="text"
+                  id="role"
+                  name="role"
+                  value={formValues.role}
+                />
+              </div>
+              <div className="items-form">
+                <label htmlFor="photo">Enlace de Foto</label>
+                <input
+                  onChange={onChangeForm}
+                  type="text"
+                  id="photo"
+                  name="photo"
+                  value={formValues.photo}
+                />
+              </div>
+              <div className="items-form">
                 <label htmlFor="description">
                   ¿En que quieres convertirte con la educación de Platzi Master?
                 </label>

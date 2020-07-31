@@ -53,6 +53,7 @@
 	border-radius: 10px;
 	text-transform: uppercase;
 	color: #55834f;
+	transition-duration: 0.3s;
 }
 .Hero-button:hover{
 	text-decoration: none;

@@ -13,7 +13,7 @@ const ProfileCard = (props) => {
 					<img src={profile.photo || pandaPlaceholder} alt="señor musk" />
 				</div>
 				<div className="profile__content">
-					<button onClick={() => showModal(profile._id)}>
+					<button className="profile__badge__container" onClick={() => showModal(profile._id)}>
 						<h3 className="profile__badge">{profile.role}</h3>
 					</button>
 					<h2>{profile.name}</h2>
