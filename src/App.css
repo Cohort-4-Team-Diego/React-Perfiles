@@ -125,6 +125,9 @@ nav .ulNavbar li a {
 		width: 100%;
 		display: none;
 	}
+	.ulNavbar--active {
+		display: block;
+	}
 
 	.ulNavbar li {
 		width: 100%;
