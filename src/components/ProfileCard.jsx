@@ -17,7 +17,7 @@ const ProfileCard = (props) => {
 						<h3 className="profile__badge">{profile.role}</h3>
 					</button>
 					<h2>{profile.name}</h2>
-					<p>{profile.origin_city}</p>
+					<p>{profile.country?.toLowerCase() === 'colombia' ? '🇨🇴' : '🇲🇽'} {profile.origin_city}</p>
 					<p>{profile.description}</p>
 					<div className="profile__social">
 						<a href={profile.github_profile} target="_blank">

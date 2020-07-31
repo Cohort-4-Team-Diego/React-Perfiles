@@ -16,7 +16,6 @@ import api from "./api";
 import ProfileCard from "./components/ProfileCard";
 
 const defaultValues = {
-  role: "NA",
   birthdate: "1990-01-01",
   facebook: "NA",
 };
