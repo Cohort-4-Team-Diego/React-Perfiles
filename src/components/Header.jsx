@@ -1,8 +1,9 @@
-import React from 'react'
-import logo from '../assets/images/logoPandev.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
-const Header = () => {
+import React from 'react';
+import logo from '../assets/images/logoPandev.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+const Header = ({ onToggleBurger, burgerActive }) => {
+	let navClass = burgerActive ? 'ulNavbar ulNavbar--active' : 'ulNavbar';
 	return (
 		<header className="nav-header">
 			<nav id="navbar">
@@ -27,29 +28,44 @@ const Header = () => {
 						<p className="logo-nombre">
 							Pan<span>Devs</span>
 						</p>
-						<FontAwesomeIcon icon={faBars} />
+						<FontAwesomeIcon
+							onClick={onToggleBurger}
+							icon={faBars}
+						/>
 					</div>
 				</div>
-				<ul class="ulNavbar">
+				<ul class={navClass}>
 					<li>
-						<a className="item-li team-nav" href="#team-cohort">
+						<a
+							className="item-li team-nav"
+							onClick={onToggleBurger}
+							href="#team-cohort"
+						>
 							Equipo
 						</a>
 					</li>
 					<li>
-						<a className="item-li team-description" href="#description">
+						<a
+							className="item-li team-description"
+							href="#description"
+							onClick={onToggleBurger}
+						>
 							Detalles
 						</a>
 					</li>
 					<li>
-						<a className="item-li contact-nav" href="#contact">
+						<a
+							className="item-li contact-nav"
+							onClick={onToggleBurger}
+							href="#contact"
+						>
 							Contacto
 						</a>
 					</li>
 				</ul>
 			</nav>
 		</header>
-	)
-}
+	);
+};
 
-export default Header
+export default Header;
