@@ -26,7 +26,6 @@ a{
     z-index: 1;
     display: grid;
     grid-template-columns: 1fr 10fr 1fr;
-
 }
 .lista1{
     display:none;
@@ -378,6 +377,10 @@ a{
     .lista1 {
         flex-wrap: wrap;
     }
+    .profile-mobile{
+        margin: 0;
+    }
+
 }
 
 @media screen and (min-width: 767px) and (max-width: 1023px) {
@@ -405,6 +408,10 @@ a{
     
     .footer{
         height: 11vh;
+    }
+
+    .profile-mobile{
+        margin: 0;
     }
 }
 
@@ -465,5 +472,9 @@ a{
 
     .abrirlista1{
         margin: 0 10px;
+    }
+
+    .profile-mobile{
+        margin: 0;
     }
 }
