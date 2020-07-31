@@ -11,7 +11,7 @@ const ModalCrearPerfil = ({
   handleSubmit,
   editMode,
   handleUpdate,
-  handleDelete
+  handleDelete,
 }) => {
   const modalShow = `container_modal ${toggle}`;
   return ReactDOM.createPortal(
@@ -154,16 +154,27 @@ const ModalCrearPerfil = ({
               </div>
               {editMode ? (
                 <React.Fragment>
-                <button className="modal-in update-button" onClick={(e) => handleUpdate(e, formValues._id)}>
-                  Actualizar
-                </button>
+                  <button
+                    className="modal-in update-button"
+                    onClick={(e) => handleUpdate(e, formValues._id)}
+                  >
+                    Actualizar
+                  </button>
 
-                <button className="modal-in delete-button" onClick={(e) => handleDelete(e, formValues._id)}>
-                  Borrar
-                </button>
+                  {!formValues.main && (
+                    <button
+                      className="modal-in delete-button"
+                      onClick={(e) => handleDelete(e, formValues._id)}
+                    >
+                      Borrar
+                    </button>
+                  )}
                 </React.Fragment>
               ) : (
-                <button className="modal-in create-button" onClick={handleSubmit}>
+                <button
+                  className="modal-in create-button"
+                  onClick={handleSubmit}
+                >
                   Crear
                 </button>
               )}
