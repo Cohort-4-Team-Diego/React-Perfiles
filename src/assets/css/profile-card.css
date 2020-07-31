@@ -20,6 +20,8 @@
     grid-column: 3/4;
     grid-row: 2/5;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, .5);
+    height: 80%;
+    margin-top: 50px;
 }
 
 .profile__img-container img {
@@ -47,13 +49,30 @@
     font-size: 2rem;
 }
 
-.profile__badge{
-    margin-bottom: 0;
+.profile__badge__container{
     background-color: black;
     color: white;
+    border-radius: 2.5px;
+    outline: 0;
+}
+
+.profile__badge__container:hover{
+    transition-duration: 0.3s;
+    background-color: white;
+    color: black;
+}
+
+.profile__badge__container:focus{
+    outline: none;
+}
+
+
+.profile__badge{
+    margin-bottom: 0;
     padding: 5px 10px;
     font-size: 12px;
     border-radius: 2px;
+    border-radius: 5px;
 }
 
 .profile__social a{
@@ -64,7 +83,14 @@
 
 .profile-mobile{
     background-color: #999999;
+    margin-left: 0;
+    margin-right: 0;
 }
+
+.profile-container-mobile{
+    padding: 0;
+}
+
 
 @media screen and (min-width: 767px) and (max-width: 1023px) {
     .profile-mobile {
@@ -77,6 +103,7 @@
     }
 
     .profile-container-mobile{
+        padding: 0;
         position: initial;
         max-height: 500px;
     }
@@ -99,6 +126,7 @@
     }
 
     .profile-container-mobile{
+        padding: 0;
         position: initial;
     }
 
