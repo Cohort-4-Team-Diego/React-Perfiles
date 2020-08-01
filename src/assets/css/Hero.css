@@ -161,7 +161,7 @@
 	}
 }
 
-@media screen and (min-height: 320px) and (max-height: 767px) and (max-width: 1023px) and (min-width: 768px) {
+@media screen and (min-height: 320px) and (max-height: 767px) and (min-width: 320px) and (max-width: 1023px) {
 	.Hero {
 		height: 150vh;
 	}
