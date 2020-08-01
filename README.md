@@ -1,7 +1,7 @@
 <center><h1>PanDevs</h1></center> 
 <center>
 
-<center>![PanDevs](https://avatars0.githubusercontent.com/u/67612979?s=400&u=31c759c6d415da1aeb59ce3e12c1c5f9a5468b3d&v=4)</center>
+![PanDevs](https://avatars0.githubusercontent.com/u/67612979?s=400&u=31c759c6d415da1aeb59ce3e12c1c5f9a5468b3d&v=4)
 
 </center>
 
@@ -70,6 +70,5 @@ Servicio fronted en donde se utilizó la librería de React Js, HTML5, CSS, Java
 # Licencia <img src="https://img.shields.io/badge/Licence-MIT-RED"> 
 
 Este proyecto está bajo la Licencia (MIT)
-<center>
+
 ![Platzi Master](https://acs.infomega.biz/share/proxy/alfresco-noauth/api/internal/shared/node/9MGhZx9ETTq5VUfopgpHhg/content/thumbnails/imgpreview?c=force&lastModified=imgpreview%3A1596240212844)
-</center>
