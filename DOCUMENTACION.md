@@ -2,7 +2,7 @@
 <center>
 
 ![PanDevs](https://avatars0.githubusercontent.com/u/67612979?s=400&u=31c759c6d415da1aeb59ce3e12c1c5f9a5468b3d&v=4) 
-
+![Platzi Master](https://acs.infomega.biz/share/proxy/alfresco-noauth/api/internal/shared/node/9MGhZx9ETTq5VUfopgpHhg/content/thumbnails/imgpreview?c=force&lastModified=imgpreview%3A1596240212844)
 </center>
 
 <center><h1>Platzi master</h1></center> 
@@ -13,18 +13,18 @@
 
 |Integrante         |Area              |Rol               |
 |:------------------|:-----------------|:-----------------|
-|Adrian Gutierrez   |**Frontend:**     | Diseño página de perfil, Desarrollo de sección Hero      |
+|Adrian Gutierrez   |**Frontend:**     |Diseño página de perfil, Desarrollo de sección Hero      |
 |Didier Cuetia      |**Backend:**      |Conexión Backend con Frontend, Desarrollo de sección descriptiva |
-|Ildebrando Mora    |**Backend:**| Administración Base de Datos, Documentación de APP Web|
-|Juan Espitia       |**Frontend** | Desarrollo de Footer y Modal, Documentación de APP Web       |
-|Santiago Arcila    |**Frontend** | Desarrollo de distribución ciruclar,  Desarrollo de sección descriptiva
-|Oscar Perez        |**Backend** | Conexión de Backend con Frontend, Administración de GitHub Backend
-|Francisco Suarez   |**Frontend** | Desarrollo de Navbar, Administración de Github Frontend
+|Ildebrando Mora    |**Backend:**      |Administración Base de Datos, Documentación de APP Web|
+|Juan Espitia       |**Frontend**      |Desarrollo de Footer y Modal, Documentación de APP Web       |
+|Santiago Arcila    |**Frontend**      |Desarrollo de distribución ciruclar,  Desarrollo de sección descriptiva
+|Oscar Perez        |**Backend**       |Conexión de Backend con Frontend, Administración de GitHub Backend
+|Francisco Suarez   |**Frontend**      |Desarrollo de Navbar, Administración de Github Frontend
 
 
 
 
-Inicialmente este proyecto comenzó realizarse como una SPA ya que teníamos conocimientos básicos del desarrollo web, a medida que se fue avanzando en curso se fueron agregando diferentes actualizaciones como lo son usar Node.js Mongo y React js. 
+Inicialmente este proyecto comenzó realizarse como una SPA ya que teníamos conocimientos básicos del desarrollo web, a medida que se fue avanzando en curso se fueron agregando diferentes actualizaciones como lo son usar Node.js Mongo y React js.
 
 El proyecto tiene como nombre **PanDevs**, analogía que sacamos del tiempo en el que nos encontramos y del largo trabajo que lleva cursar Platzi master, este tiene una página principal la cual interactúa con el usuario de manera dinámica en el momento de realizar las consultas a cada miembro, o al momento de registrarse para ser parte el equipo, igualmente a medida que se va agregando un miembro el aplicativo reagina agregándolo a la lista de integrantes, los miembro iniciales del proyecto se agregan igualmente a una pare grafica de la página principal que permite visualizar a los pioneros del equipo.
 
