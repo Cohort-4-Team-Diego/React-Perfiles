@@ -33,12 +33,12 @@ Entre todos los integrantes del equipo participamos en varias reuniones en donde
 Las cuales fueron grabadas y se puede ver en el siguiente link [Ver sesiones grabadas](https://drive.google.com/drive/u/0/folders/1Y7KVsIQDkobras1ooW4ftoBsjRkW2Zfp)
 
 
-## Backend Node.js
+# Backend Node.js <img src="https://img.shields.io/badge/node-11.1.3-green"> <img src="https://img.shields.io/badge/npm-6.14.7-blue"> <img src="https://img.shields.io/badge/mongoose-5.9.24-red"> <img src="https://img.shields.io/badge/Express.js-4.17.1-lightgrey"> <img src="https://img.shields.io/badge/MongoDB Atlas-Green">
 ### Comenzado 🚀
 
 Es un servicio en donde se implementó un CRUD (Create, Read, Update, Delete) en node.js apoyado con base de datos NoSQL MongoDB, en donde se usaron tecnologías  basadas en javascript como Express, Cors, Mongoose
 
-<img src="https://img.shields.io/badge/node-11.1.3-green"> <img src="https://img.shields.io/badge/npm-6.14.7-blue"> <img src="https://img.shields.io/badge/mongoose-5.9.24-red"> <img src="https://img.shields.io/badge/Express.js-4.17.1-lightgrey"> <img src="https://img.shields.io/badge/MongoDB Atlas-Green">
+
 
 ### Instalación 🔧
 
@@ -50,13 +50,13 @@ Es un servicio en donde se implementó un CRUD (Create, Read, Update, Delete) en
 
 > Documentación completa en [https://github.com/Cohort-4-Team-Diego/backend-perfiles/blob/dev/README.md](https://github.com/Cohort-4-Team-Diego/backend-perfiles/blob/dev/README.md)
 
-## Frontend React js
+# Frontend React js <img src="https://img.shields.io/badge/HTML-5-orange"> <img src="https://img.shields.io/badge/CSS-3-blue"> <img src="https://img.shields.io/badge/JavaScript-Yellow"> <img src="https://img.shields.io/badge/React.js-16.13.1-blue">
 
 ### Comenzando 🚀
 
 Servicio fronted en donde se utilizó la librería de React Js, HTML5, CSS, Javascript y desde la cual se está consumiendo el servicio realizado en el Backend, 
 
-<img src="https://img.shields.io/badge/HTML-5-orange"> <img src="https://img.shields.io/badge/CSS-3-blue"> <img src="https://img.shields.io/badge/JavaScript-Yellow"> <img src="https://img.shields.io/badge/React.js-16.13.1-blue">
+
 
 ### Instalación 🔧
 
