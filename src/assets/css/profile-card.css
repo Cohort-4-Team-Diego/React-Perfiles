@@ -10,7 +10,7 @@
 }
 
 .profile__item{
-    background-color: #588B2D;
+    background-color: #55834f;
     grid-column: 2/5;
     grid-row: 3/4;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, .5);
@@ -126,12 +126,14 @@
 
     .profile__content {
         padding: 7% 6%;
-        background-color: #588B2D;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, .5)
     }
 
     .profile-container-mobile{
-        padding: 0;
+        padding: 0 15px;
         position: initial;
+        margin-bottom: 100px;
+
     }
 
 }
