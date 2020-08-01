@@ -19,7 +19,7 @@
 |Didier Cuetia      |**Backend:**      |Conexión Backend con Frontend, Desarrollo de sección descriptiva |
 |Ildebrando Mora    |**Backend:**      |Administración Base de Datos, Documentación de APP Web|
 |Juan Espitia       |**Frontend**      |Desarrollo de Footer y Modal, Documentación de APP Web       |
-|Santiago Arcila    |**Frontend**      |Desarrollo de distribución circular, Desarrollo de sección descriptiva
+|Santiago Arcila    |**Frontend**      |Desarrollo de distribución circular, Desarrollo de sección Hero
 |Oscar Perez        |**Backend**       |Conexión de Backend con Frontend, Administración de GitHub Backend
 |Francisco Suarez   |**Frontend**      |Desarrollo de Navbar, Administración de Github Frontend
 
