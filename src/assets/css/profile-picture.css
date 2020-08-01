@@ -1,51 +1,51 @@
 /*  */
-@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
 
 html,
 body {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-	width: 100%;
+  width: 100%;
 }
 
 header .header-div {
-	background-color: red;
-	height: auto;
+  background-color: red;
+  height: auto;
 }
 
 section {
-	display: block;
+  display: block;
 }
 
 .team-distribution {
-	background-color: #e4e4e4;
-	width: 100%;
-	display: grid;
-	grid-template-columns: repeat(4, 12rem);
-	grid-template-rows: repeat(4, 12rem);
-	justify-items: center;
-	justify-content: center;
-	align-content: center;
-	grid-column-gap: 25px;
-	grid-row-gap: 7px;
-	padding-top: 100px;
-	padding-bottom: 20px;
+  background-color: #e4e4e4;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 12rem);
+  grid-template-rows: repeat(4, 12rem);
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
+  grid-column-gap: 25px;
+  grid-row-gap: 7px;
+  padding-top: 100px;
+  padding-bottom: 20px;
 }
 
 .team-distribution button {
-	display: none;
-	outline: none;
+  display: none;
+  outline: none;
 }
 
 .team-distribution img {
-	width: 98%;
-	height: 98%;
-	border-radius: 50%;
-	grid-row: 1/2;
-	grid-column: 1/2;
+  width: 98%;
+  height: 98%;
+  border-radius: 50%;
+  grid-row: 1/2;
+  grid-column: 1/2;
 }
 
 .team-distribution-img {
@@ -58,6 +58,7 @@ section {
   justify-content: center;
   align-items: center;
   position: relative;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
 .team-distribution .team-distribution-img:hover button {
@@ -124,90 +125,91 @@ section {
 }
 
 .team-distribution .img-9 {
-	grid-column: 2/4;
-	grid-row: 2/4;
-	width: 80%;
-	height: 80%;
-	justify-self: center;
-	align-self: center;
+  grid-column: 2/4;
+  grid-row: 2/4;
+  width: 80%;
+  height: 80%;
+  justify-self: center;
+  align-self: center;
+  box-shadow: none;
 }
 
 .team-distribution .img-9 img {
-	border: none;
-	border-radius: 0%;
+  border: none;
+  border-radius: 0%;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-	.team-distribution {
-		grid-column-gap: 0;
-		grid-template-columns: repeat(4, 10rem);
-		grid-template-rows: repeat(4, 10rem);
-	}
+  .team-distribution {
+    grid-column-gap: 0;
+    grid-template-columns: repeat(4, 10rem);
+    grid-template-rows: repeat(4, 10rem);
+  }
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
-	.team-distribution {
-		grid-template-columns: repeat(2, 9rem);
-		grid-template-rows: repeat(5, 9rem);
-		grid-column-gap: 10px;
-		grid-row-gap: 7px;
-		padding-top: 75px;
-	}
+  .team-distribution {
+    grid-template-columns: repeat(2, 9rem);
+    grid-template-rows: repeat(5, 9rem);
+    grid-column-gap: 10px;
+    grid-row-gap: 7px;
+    padding-top: 75px;
+  }
 
-	.team-distribution .img {
-		grid-column: 1/3;
-		grid-row: 1;
-	}
-	.team-distribution .img-1 {
-		grid-column: 1/2;
-		grid-row: 2;
-	}
+  .team-distribution .img {
+    grid-column: 1/3;
+    grid-row: 1;
+  }
+  .team-distribution .img-1 {
+    grid-column: 1/2;
+    grid-row: 2;
+  }
 
-	.team-distribution .img-2 {
-		grid-column: 2/3;
-		grid-row: 2;
-	}
+  .team-distribution .img-2 {
+    grid-column: 2/3;
+    grid-row: 2;
+  }
 
-	.team-distribution .img-3 {
-		grid-column: 1/2;
-		grid-row: 3;
-	}
+  .team-distribution .img-3 {
+    grid-column: 1/2;
+    grid-row: 3;
+  }
 
-	.team-distribution .img-4 {
-		grid-column: 2/3;
-		grid-row: 3;
-	}
+  .team-distribution .img-4 {
+    grid-column: 2/3;
+    grid-row: 3;
+  }
 
-	.team-distribution .img-5 {
-		grid-column: 1/2;
-		grid-row: 4;
-	}
+  .team-distribution .img-5 {
+    grid-column: 1/2;
+    grid-row: 4;
+  }
 
-	.team-distribution .img-6 {
-		grid-column: 2/3;
-		grid-row: 4;
-	}
+  .team-distribution .img-6 {
+    grid-column: 2/3;
+    grid-row: 4;
+  }
 
-	.team-distribution .img-7 {
-		grid-column: 1/2;
-		grid-row: 5;
-	}
+  .team-distribution .img-7 {
+    grid-column: 1/2;
+    grid-row: 5;
+  }
 
-	.team-distribution .img-8 {
-		grid-column: 2/3;
-		grid-row: 5;
-	}
+  .team-distribution .img-8 {
+    grid-column: 2/3;
+    grid-row: 5;
+  }
 
-	.team-distribution .img-9 {
-		grid-column: 1/3;
-		grid-row: 1;
-	}
+  .team-distribution .img-9 {
+    grid-column: 1/3;
+    grid-row: 1;
+  }
 
-	.team-distribution .img-9 img {
-		height: 150%;
-		width: 75%;
-	}
+  .team-distribution .img-9 img {
+    height: 150%;
+    width: 75%;
+  }
 
-	.team-distribution button h2 {
-		font-size: 20px;
-	}
+  .team-distribution button h2 {
+    font-size: 20px;
+  }
 }

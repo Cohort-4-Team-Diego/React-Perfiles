@@ -1,156 +1,154 @@
 .Hero {
-	height: 100%;
-	background: #999999;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	background-image: url('../images/bamboo-pixel-6.png');
-	background-repeat: no-repeat;
-	background-position: bottom;
+  height: 100vh;
+  background: #999999;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url("../images/bamboo-pixel-6.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 .superior {
-	margin-top: 65px;
-	padding: 40px 40px 0 40px;
-	display: flex;
-	background-image: url('../images/liana-bamboo-doble.png');
-	background-size: 100% 70%;
-	background-repeat: no-repeat;
+  margin-top: 65px;
+  padding: 40px 40px 0 40px;
+  display: flex;
+  background-image: url("../images/liana-bamboo-doble.png");
+  background-size: 100% 70%;
+  background-repeat: no-repeat;
 }
 
 .Hero-container {
-	margin: 0 auto;
-	max-width: 800px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+  margin: 0 auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .Hero-img {
-	align-self: center;
+  align-self: center;
 }
 .Hero-img img {
-	max-width: 25vh;
+  max-width: 25vh;
 }
 .Hero-title {
-	color: white;
-	align-self: center;
-	font-weight: 700;
-	font-size: 40px;
+  color: white;
+  align-self: center;
+  font-weight: 700;
+  font-size: 40px;
 }
 .Hero-description {
-	font-size: 30px;
-	align-self: center;
-	color: white;
-	text-align: center;
-	padding-bottom: 20px;
+  font-size: 30px;
+  align-self: center;
+  color: white;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 .Hero-button {
-	background: white;
-	padding: 0 100px;
-	margin: 0 auto;
-	font-size: 28px;
-	border: 5px solid #55834f;
-	border-radius: 10px;
-	text-transform: uppercase;
-	color: #55834f;
-	transition-duration: 0.3s;
+  background: white;
+  padding: 0 100px;
+  margin: 0 auto;
+  font-size: 28px;
+  border: 5px solid #55834f;
+  border-radius: 10px;
+  text-transform: uppercase;
+  color: #55834f;
+  transition-duration: 0.3s;
 }
-.Hero-button:hover{
-	text-decoration: none;
-	color:#385734;
-	border: 5px solid #385734;
-	background: #d3cece;
+.Hero-button:hover {
+  text-decoration: none;
+  color: #385734;
+  border: 5px solid #385734;
+  background: #d3cece;
 }
 
 .inferior {
-	display: flex;
-	background-repeat: no-repeat;
-	background-position: bottom;
+  display: flex;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 .Hero-logos {
-	width: 100%;
-	display: flex;
-	gap: 8vw;
-	align-items: center;
-	justify-content: center;
+  width: 100%;
+  display: flex;
+  gap: 8vw;
+  align-items: center;
+  justify-content: center;
 }
 
 .Hero-logos_html {
-	width: 8vw;
+  width: 8vw;
 }
 
 .Hero-logos_css {
-	width: 10vw;
+  width: 10vw;
 }
 
 .Hero-logos_react {
-	width: 15vw;
+  width: 15vw;
 }
 
 .Hero-logos_mongo {
-	width: 11vw;
+  width: 11vw;
 }
 
 .Hero-logos_github {
-	width: 20vw;
+  width: 20vw;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-	.Hero-logos{
-		gap: 6vw
-	}
-	.superior {
-		background-size: 100% 45%;
-	}
-	
-	.Hero-logos_github {
-		width: 26vw;
-	}
+  .Hero-logos {
+    gap: 6vw;
+  }
+  .superior {
+    background-size: 100% 45%;
+  }
 
+  .Hero-logos_github {
+    width: 26vw;
+  }
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
+  .Hero-button {
+    font-size: 22px;
+    padding: 0 10px;
+  }
+  .Hero-title {
+    text-align: center;
+    font-size: 32px;
+  }
 
-	.Hero-button {
-		font-size: 22px;
-		padding: 0 10px;
-	}
-	.Hero-title {
-		text-align: center;
-		font-size: 32px;
-	}
+  .Hero-description {
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+  .Hero-img img {
+    max-width: 21vh;
+  }
+  .superior {
+    background-image: none;
+  }
 
-	.Hero-description {
-		font-size: 20px;
-		padding-bottom: 20px;
-	}
-	.Hero-img img {
-		max-width: 21vh;
-	}
-	.superior {
-		background-image: none;
-	}
+  .Hero-logos {
+    gap: 4vw;
+  }
+  .Hero-logos_html {
+    width: 8vw;
+  }
 
-	.Hero-logos {
-		gap: 4vw;
-	}
-	.Hero-logos_html {
-		width: 8vw;
-	}
+  .Hero-logos_css {
+    width: 9vw;
+  }
 
-	.Hero-logos_css {
-		width: 9vw;
-	}
+  .Hero-logos_react {
+    width: 17vw;
+  }
 
-	.Hero-logos_react {
-		width: 17vw;
-	}
+  .Hero-logos_mongo {
+    width: 15vw;
+  }
 
-	.Hero-logos_mongo {
-		width: 15vw;
-	}
-
-	.Hero-logos_github {
-		width: 30vw;
-	}
+  .Hero-logos_github {
+    width: 30vw;
+  }
 }
