@@ -126,14 +126,14 @@
 
     .profile__content {
         padding: 7% 6%;
-        box-shadow: 4px 4px 4px rgba(0, 0, 0, .5)
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, .5);
+        background-color: #55834f;
     }
 
     .profile-container-mobile{
         padding: 0 15px;
         position: initial;
         margin-bottom: 100px;
-
     }
 
 }
