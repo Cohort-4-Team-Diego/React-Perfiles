@@ -34,7 +34,8 @@ Las cuales fueron grabadas y se puede ver en el siguiente link [Ver sesiones gra
 
 
 # Backend Node.js <img src="https://img.shields.io/badge/node-11.1.3-green"> <img src="https://img.shields.io/badge/npm-6.14.7-blue"> <img src="https://img.shields.io/badge/mongoose-5.9.24-red"> <img src="https://img.shields.io/badge/Express.js-4.17.1-lightgrey"> <img src="https://img.shields.io/badge/MongoDB Atlas-Green">
-### Comenzado 🚀
+
+### Comenzando 🚀
 
 Es un servicio en donde se implementó un CRUD (Create, Read, Update, Delete) en node.js apoyado con base de datos NoSQL MongoDB, en donde se usaron tecnologías  basadas en javascript como Express, Cors, Mongoose
 
