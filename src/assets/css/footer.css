@@ -91,6 +91,7 @@ a {
   z-index: 12;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .carrusel-perfil h1 {
@@ -108,11 +109,14 @@ a {
   align-items: center;
 }
 
+
 #modalPerfil .modal-image-container {
   display: flex;
   width: 100%;
   max-height: 500px;
+  margin: 20px 170px;
 }
+
 
 .close {
   position: absolute;
@@ -320,8 +324,8 @@ a {
 }
 
 #modalPerfil .row {
-  margin-left: 0;
-  margin-right: 0;
+  margin: 0 80px;
+  font-size: 20px;
 }
 
 .bst-imagen-perfil {
@@ -422,10 +426,14 @@ a {
   .container_modal--perfil-caja {
     width: 95vw;
   }
+  #modalPerfil .modal-image-container{
+    margin: 0;
+  }
 
   #modalPerfil .row {
     margin-left: 0;
     margin-right: 0;
+    font-size: 15px;
   }
 
   #modalPerfil .profile-details {
@@ -434,6 +442,7 @@ a {
 
   #modalPerfil .profile-answers {
     padding-left: 0;
+
   }
 
   .modal-social-icons {

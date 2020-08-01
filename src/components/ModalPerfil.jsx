@@ -30,16 +30,16 @@ const ModalPerfil = ({ toggle, hideModal, profile }) => {
 							</div>
 						</div>
 						<div className="row mt-3">
-							<div className="col-12 col-md-12 col-lg-5 mx-auto modal-image-column">
+							<div className="col-12 col-md-12  mx-auto modal-image-column">
 								<div className="modal-image-container">
 									<img
-										className="bst-imagen-perfil border shadow"
+										className="bst-imagen-perfil border shadow "
 										src={profile.photo || pandaPlaceholder}
 										alt={profile.name}
 									/>
 								</div>
 							</div>
-							<div className="col-12 col-md-12 col-lg-7 profile-details text-center">
+							<div className="col-12 col-md-12  profile-details text-center">
 								<p id="nombre">
 									<strong>Nombre: </strong> {profile.name}
 								</p>
