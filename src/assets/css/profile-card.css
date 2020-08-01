@@ -1,0 +1,139 @@
+.profile {
+    display: grid;
+    height: 600px;
+    width: 100%;
+    background-color: #999999;
+    grid-template-columns: 1% 5% 30% 45% 1% ;
+    grid-template-rows: 1% 10% 60% 10% 1%;
+    color: white;
+    justify-content: center;
+}
+
+.profile__item{
+    background-color: #55834f;
+    grid-column: 2/5;
+    grid-row: 3/4;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, .5);
+}
+
+.profile__img-container{
+    grid-column: 3/4;
+    grid-row: 2/5;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, .5);
+    height: 80%;
+    margin-top: 50px;
+}
+
+.profile__img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile__content{
+    grid-column: 4/5;
+    grid-row: 3/4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.5rem;
+}
+
+.profile__content button{
+    border: none;
+}
+
+.profile__content h2{
+    margin: 5px;
+    font-size: 2rem;
+}
+
+.profile__badge__container{
+    background-color: black;
+    color: white;
+    border-radius: 2.5px;
+    outline: 0;
+}
+
+.profile__badge__container:hover{
+    transition-duration: 0.3s;
+    background-color: white;
+    color: black;
+}
+
+.profile__badge__container:focus{
+    outline: none;
+}
+
+
+.profile__badge{
+    margin-bottom: 0;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 2px;
+    border-radius: 5px;
+}
+
+.profile__social a{
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 5px;
+}
+
+.profile-mobile{
+    background-color: #999999;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 150px;
+}
+
+.profile-container-mobile{
+    padding: 0;
+    margin-top: -150px;
+}
+
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    .profile-mobile {
+        display: block;
+        padding-top: 50px;
+    }
+
+    .profile__img-container{
+        height: 80%;
+        margin-top: 50px;
+    }
+
+    .profile-container-mobile{
+        padding: 0;
+        position: initial;
+        max-height: 500px;
+        margin-top: -50px
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .profile-mobile {
+        display: flex;
+    }
+
+    .profile {
+       display: block;
+       height: auto;
+       margin: 2rem 0;
+    }
+
+    .profile__content {
+        padding: 7% 6%;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, .5)
+    }
+
+    .profile-container-mobile{
+        padding: 0 15px;
+        position: initial;
+        margin-bottom: 100px;
+
+    }
+
+}
